@@ -33,3 +33,17 @@ dwm.mfact: 0.5
 dwm.nmaster: 1
 dwm.resizehints: 1
 dwm.lockfullscreen: 1
+dmenu.topbar: 1
+dmenu.fuzzy: 1
+dmenu.centered: 0
+dmenu.min_width: 500
+dmenu.font: Iosevka NFM Medium:size=18
+dmenu.prompt: 
+dmenu.col_norm_fg: #bbbbbb
+dmenu.col_norm_bg: #212121
+dmenu.col_sel_fg: #ffffff
+dmenu.col_sel_bg: #c792ea
+dmenu.col_out_fg: #ffffff
+dmenu.col_out_bg: #c792ea
+dmenu.lines: 0
+dmenu.border_width: 3
