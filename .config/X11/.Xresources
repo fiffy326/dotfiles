@@ -46,4 +46,4 @@ dmenu.col_sel_bg: #c792ea
 dmenu.col_out_fg: #ffffff
 dmenu.col_out_bg: #c792ea
 dmenu.lines: 0
-dmenu.border_width: 3
+dmenu.border_width: 0
