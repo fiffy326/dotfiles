@@ -1,0 +1,31 @@
+/* Hide nitro gift button */
+button[aria-label="Send a gift"] {display: none;}
+
+/* Hide super reaction tab in the reaction menu */
+button[id="super-reaction-picker-tab"] {display: none;}
+
+/* Hide super reaction quick action button */
+div[role="button"][aria-label="Add Super Reaction"] {display: none;}
+
+/* Hide the create thread quick action button */
+div[role="button"][aria-label="Create Thread"] {display: none;}
+
+/* Hide the mark unread quick action button */
+div[role="button"][aria-label="Mark Unread"] {display: none;}
+
+/* Hide the help button at the top right of the screen */
+div[role="button"][aria-label="Help"] {display: none;}
+
+/* Hide context menu items */
+div[role="menuitem"][id="message-apps"] {display: none;} /* Apps */
+div[role="menuitem"][id="message-tts"] {display: none;} /* Speak message */
+div[role="menuitem"][id="message-report"] {display: none;} /* Report message */
+div[role="menuitem"][id="message-thread"] {display: none;} /* Create thread */
+div[role="menuitem"][id="message-mark-unread"] {display: none;} /* Mark as unread */
+div[role="menuitem"][id="message-add-reaction-1"] {display: none;} /* Add super reaction */
+/* div[role="menuitem"][id="message-add-reaction-0"] {display: none;} Add reaction */
+
+/* Recolor the "Read all" button [Vencord] */
+ul[data-list-id="guildsnav"] button {
+  background-color: var(--background-primary) !important;
+}
