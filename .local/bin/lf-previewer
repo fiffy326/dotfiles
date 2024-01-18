@@ -1,0 +1,5 @@
+#!/bin/sh
+
+bat --paging=never --style=numbers --terminal-width "$(($2-5))" -f "$1"
+
+# vim:set ts=4 sts=4 sw=4:
