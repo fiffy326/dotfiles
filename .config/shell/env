@@ -1,0 +1,61 @@
+#!/bin/sh
+
+# Add local executables to the $PATH
+export PATH="$PATH:$HOME/.local/bin"
+
+# XDG base directories
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
+export XDG_DATA_DIRS='/usr/local/share:/usr/share'
+export XDG_CONFIG_DIRS='/etc/xdg'
+
+# XDG user directories
+export XDG_DESKTOP_DIR="$(xdg-user-dir DESKTOP)"
+export XDG_DOCUMENTS_DIR="$(xdg-user-dir DOCUMENTS)"
+export XDG_DOWNLOAD_DIR="$(xdg-user-dir DOWNLOAD)"
+export XDG_MUSIC_DIR="$(xdg-user-dir MUSIC)"
+export XDG_PICTURES_DIR="$(xdg-user-dir PICTURES)"
+export XDG_PUBLICSHARE_DIR="$(xdg-user-dir PUBLICSHARE)"
+export XDG_TEMPLATES_DIR="$(xdg-user-dir TEMPLATES)"
+export XDG_VIDEOS_DIR="$(xdg-user-dir VIDEOS)"
+
+# De-clutter $HOME
+export HISTFILE="$XDG_STATE_HOME/shell/history"
+export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
+export XDOTDIR="$XDG_CONFIG_HOME/X11"
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+export GNUPGHOME="$XDG_DATA_HOME/gnupg"
+export WINEPREFIX="$XDG_DATA_HOME/wine"
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
+export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
+
+# Program preferences
+export WM='dwm'
+export SHELL="$(getent passwd $USER | awk -F: '{print $7}')" # Login shell
+export SXHKD_SHELL='/bin/sh'                                 # System shell
+export TERMINAL='alacritty'
+export BROWSER='firefox'
+export OPENER='xdg-open'
+export EDITOR='nvim'
+export VISUAL='nvim'
+export PAGER='less'
+
+# Colored manpages with bat
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANROFFOPT='-c'
+
+# Appearance preferences
+export WALLPAPER="$XDG_PICTURES_DIR/wallpapers/jonatan-pie-e2MnKlEFcTg-unsplash.jpg"
+export PYWAL_THEME='base16-materialer'
+export BAT_THEME='Coldark-Dark'
+
+# MAC addresses for bluetooth devices
+export HEADPHONES_NEW='AC:80:0A:22:5C:D4'
+export HEADPHONES_OLD='F8:4E:17:6A:EB:87'
+
+# Export environment variables
+dbus-update-activation-environment --systemd --all
+
+# vim:set ts=4 sts=4 sw=4:
