@@ -1,0 +1,1 @@
+/home/emma/.config/zsh/.zshenv
