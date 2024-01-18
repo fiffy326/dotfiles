@@ -18,7 +18,7 @@ alias dotfiles-list='dotfiles ls-tree -r main --name-only'
 
 alias sudo='sudo '
 
-alias f='(alacritty --working-directory $(pwd) &); disown -a'
+alias n='(alacritty --working-directory $(pwd) &); disown -a'
 
 alias grep='grep --color=auto'
 alias diff='diff --color=auto'
