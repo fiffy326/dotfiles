@@ -1,0 +1,1 @@
+/home/emma/.config/bash/.bashrc
