@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sh -c "$(curl -sS 'https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh')"
+
+# vim:set ts=4 sts=4 sw=4:
