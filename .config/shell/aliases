@@ -12,6 +12,7 @@ alias edit-zshrc="$EDITOR $ZDOTDIR/.zshrc"
 
 alias update-initramfs='sudo mkinitcpio -P'
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+alias update-xresources="xrdb -remove * && xrdb -load $HOME/.Xresources"
 
 alias dotfiles="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 alias dotfiles-list='dotfiles ls-tree -r main --name-only'
