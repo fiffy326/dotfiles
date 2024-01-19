@@ -1,8 +1,8 @@
 alt + shift + BackSpace
-    st
+    wezterm
 
 alt + shift + backslash
-    wezterm
+    st
 
 alt + shift + t
     thunderbird
