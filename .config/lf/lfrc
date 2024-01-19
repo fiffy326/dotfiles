@@ -68,18 +68,21 @@ set previewer 'lf-previewer'
 # String Formatting #
 #####################
 
-# Cursor format (hovered item)
-set cursoractivefmt "\033[7m"    # Highlight
-set cursorparentfmt "\033[7m"    # Highlight
-set cursorpreviewfmt "\033[7;2m" # Dim
+# Cursor format (hovered item) [defaults]
+#set cursorparentfmt  "\033[7m"   # Highlight (invert)
+#set cursoractivefmt  "\033[7m"   # Highlight (invert)
+#set cursorpreviewfmt "\033[7;2m" # Dim
+
+# Cursor format (hovered item) [compatible with st]
+set cursorparentfmt  "\033[4m" # Underline
+set cursoractivefmt  "\033[7m" # Highlight (invert)
+set cursorpreviewfmt "\033[4m" # Underline
 
 # Prompt format (top left)
 set promptfmt "\033[32;1m%u@%h\033[0m:\033[34;1m%d\033[0m\033[1m%f\033[0m"
 
 # Error format (bottom left)
 set errorfmt "\033[7;31;47m"     # Red bg, white fg
-
-
 
 
 ###################
