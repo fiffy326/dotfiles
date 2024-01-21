@@ -47,7 +47,7 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export MANROFFOPT='-c'
 
 # Appearance preferences
-export WALLPAPER="$XDG_PICTURES_DIR/wallpapers/jonatan-pie-e2MnKlEFcTg-unsplash.jpg"
+export WALLPAPER="$XDG_PICTURES_DIR/wallpapers/lain2-dark.png"
 export PYWAL_THEME='base16-materialer'
 export BAT_THEME='Coldark-Dark'
 
