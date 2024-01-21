@@ -27,5 +27,3 @@ echo "$(date +' %F')"
 if [ "$(date +'%I:%M:%S')" = '11:11:11' ]; then
 	notify-send -t 10000 'Make a wish!'
 fi
-
-# vim:set ts=4 sts=4 sw=4:

@@ -54,5 +54,3 @@ case "$1" in
         exit 1
         ;;
 esac
-
-# vim:set ts=4 sts=4 sw=4:

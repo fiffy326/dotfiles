@@ -27,5 +27,3 @@ case "$1" in
         echo "Invalid option: $1"
         ;;
 esac
-
-# vim:set ts=4 sts=4 sw=4:

@@ -5,5 +5,3 @@ if [ "$(playerctl -p 'spotify,spotifyd' status)" = 'Playing' ]; then
 	title="$(playerctl -p 'spotify,spotifyd' metadata title | sed -E 's/\s*-.*$//g')"
 	echo "󰓇 $artist - $title"
 fi
-
-# vim:set ts=4 sts=4 sw=4:

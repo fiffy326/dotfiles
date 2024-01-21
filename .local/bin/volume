@@ -28,5 +28,3 @@ case "$1" in
 esac
 
 kill -36 "$(pidof dwmblocks)"
-
-# vim:set ts=4 sts=4 sw=4:

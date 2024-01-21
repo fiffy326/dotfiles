@@ -13,5 +13,3 @@ if [ -n "$movie_name" ]; then
     sleep 1.25
     mpv --fs "$movie_dir/$movie_file"
 fi
-
-# vim:set ts=4 sts=4 sw=4:

@@ -19,5 +19,3 @@ else
 fi
 
 echo "$status $capacity%"
-
-# vim:set ts=4 sts=4 sw=4:

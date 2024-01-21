@@ -3,5 +3,3 @@
 xprop | awk '
 	/^WM_CLASS/{sub(/.* =/, "instance:"); sub(/,/, "\nclass:"); print}
 	/^WM_NAME/{sub(/.* =/, "title:"); print}'
-
-# vim:set ts=4 sts=4 sw=4:

@@ -1,5 +1,3 @@
 #!/bin/sh
 
 alacritty --title "Calendar" --command "calcurse"
-
-# vim:set ts=4 sts=4 sw=4:
