@@ -108,5 +108,3 @@ sxhkd &
 numlockx &
 dwmblocks &
 exec "$WM"
-
-# vim:set ts=4 sts=4 sw=4:
