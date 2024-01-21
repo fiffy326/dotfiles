@@ -57,5 +57,3 @@ export HEADPHONES_OLD='F8:4E:17:6A:EB:87'
 
 # Export environment variables
 dbus-update-activation-environment --systemd --all
-
-# vim:set ts=4 sts=4 sw=4:
