@@ -13,5 +13,3 @@ config.font = wezterm.font('FiraCode Nerd Font', { weight = 'Regular' })
 config.font_size = 12.0
 
 return config
-
--- vim:set ts=4 sts=4 sw=4:

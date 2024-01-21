@@ -50,5 +50,3 @@ alias fetch='fastfetch'
 alias iftop='sudo iftop -i wlp8s0'
 alias weather="curl --silent https://wttr.in/brisbane | sed -E 's/(Follow.*|Weather report.*)//g'"
 alias moon='phoon'
-
-# vim:set ts=4 sts=4 sw=4:

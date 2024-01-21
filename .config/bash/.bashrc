@@ -16,5 +16,3 @@ source "$XDG_CONFIG_HOME/shell/colors"
 
 # Plugins
 [[ -f '/usr/share/bash-preexec/bash-preexec.sh' ]] && source '/usr/share/bash-preexec/bash-preexec.sh'
-
-# vim:set ts=4 sts=4 sw=4:

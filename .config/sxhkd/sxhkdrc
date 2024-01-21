@@ -63,5 +63,3 @@ XF86MonBrightnessUp
 
 XF86MonBrightnessDown
     brightness down 10
-
-# vim:set ts=4 sts=4 sw=4:
