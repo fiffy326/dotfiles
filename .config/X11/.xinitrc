@@ -102,7 +102,7 @@ volume set 0 &
 
 # Start graphical environment
 feh --no-fehbg --bg-fill "$WALLPAPER" &
-wal --theme "$PYWAL_THEME" &
+wal --theme "$PYWAL_THEME" -b "$PYWAL_BG_COLOR" &
 picom &
 sxhkd &
 numlockx &
