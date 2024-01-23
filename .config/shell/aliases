@@ -24,7 +24,7 @@ alias dotfiles-list='dotfiles ls-tree -r main --name-only'
 alias sudo='sudo '
 
 # Format a C/C++ file
-alias cformat='clang-format --style="{BasedOnStyle: llvm, IndentWidth: 4}" -i'
+alias cformat='clang-format --style=file'
 
 # Colored command output
 alias grep='grep --color=auto'
