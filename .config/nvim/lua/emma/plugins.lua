@@ -22,6 +22,10 @@ local plugins = {
         "tpope/vim-sleuth"
     },
     {
+        "folke/neodev.nvim",
+        opts = {}
+    },
+    {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate"
     },
