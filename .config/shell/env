@@ -37,6 +37,9 @@ export PYTHON_HISTORY="$XDG_STATE_HOME/python/history"
 export NODE_REPL_HISTORY="$XDG_DATA_HOME/node_repl_history"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 
+# Fix for Ghidra and other Java-based applications on dwm
+export _JAVA_AWT_WM_NONREPARENTING=1
+
 # Program preferences
 export WM='dwm'
 export SHELL="$(getent passwd $USER | awk -F: '{print $7}')" # Login shell
