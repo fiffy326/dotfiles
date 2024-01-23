@@ -21,15 +21,21 @@ export XDG_PUBLICSHARE_DIR="$(xdg-user-dir PUBLICSHARE)"
 export XDG_TEMPLATES_DIR="$(xdg-user-dir TEMPLATES)"
 export XDG_VIDEOS_DIR="$(xdg-user-dir VIDEOS)"
 
-# De-clutter $HOME
+# XDG compliance shims
 export HISTFILE="$XDG_STATE_HOME/shell/history"
 export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
 export XDOTDIR="$XDG_CONFIG_HOME/X11"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+export WGETRC="$XDG_CONFIG_HOME/wgetrc"
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 export WINEPREFIX="$XDG_DATA_HOME/wine"
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
+export PYTHONUSERBASE="$XDG_DATA_HOME/python"
+export PYTHONPYCACHEPREFIX="$XDG_CACHE_HOME/python"
+export PYTHON_HISTORY="$XDG_STATE_HOME/python/history"
+export NODE_REPL_HISTORY="$XDG_DATA_HOME/node_repl_history"
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 
 # Program preferences
 export WM='dwm'
@@ -49,7 +55,7 @@ export MANROFFOPT='-c'
 # Appearance preferences
 export WALLPAPER="$XDG_PICTURES_DIR/wallpapers/cat-waves.png"
 export PYWAL_THEME='base16-eighties'
-export PYWAL_BG_COLOR="#212121"
+export PYWAL_BG_COLOR='#212121'
 export BAT_THEME='Catppuccin-macchiato'
 
 # MAC addresses for bluetooth devices
