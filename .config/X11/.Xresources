@@ -11,6 +11,7 @@ dwm.gappov: 10
 dwm.viewonrulestag: 1
 dwm.user_bh: 8
 dwm.showtitle: 0
+dwm.focusonwheel: 1
 dwm.col_norm_fg: #bbbbbb
 dwm.col_norm_bg: #212121
 dwm.col_norm_border: #4a4a4a
