@@ -1,23 +1,23 @@
 #!/bin/sh
 
 # Config editing helpers
-alias edit-env="$EDITOR $XDG_CONFIG_HOME/shell/env"
-alias edit-xinitrc="$EDITOR $XDG_CONFIG_HOME/X11/.xinitrc"
-alias edit-xresources="$EDITOR $XDG_CONFIG_HOME/X11/.Xresources"
-alias edit-xmodmap="$EDITOR $XDG_CONFIG_HOME/X11/.Xmodmap"
-alias edit-profile="$EDITOR $XDG_CONFIG_HOME/shell/profile"
-alias edit-aliases="$EDITOR $XDG_CONFIG_HOME/shell/aliases"
-alias edit-keybinds="$EDITOR $XDG_CONFIG_HOME/sxhkd/sxhkdrc"
-alias edit-bashrc="$EDITOR $XDG_CONFIG_HOME/bash/.bashrc"
-alias edit-zshrc="$EDITOR $ZDOTDIR/.zshrc"
+alias edit-env='$EDITOR $XDG_CONFIG_HOME/shell/env'
+alias edit-xinitrc='$EDITOR $XDOTDIR/.xinitrc'
+alias edit-xresources='$EDITOR $XDOTDIR/.Xresources'
+alias edit-xmodmap='$EDITOR $XDOTDIR/.Xmodmap'
+alias edit-profile='$EDITOR $XDG_CONFIG_HOME/shell/profile'
+alias edit-aliases='$EDITOR $XDG_CONFIG_HOME/shell/aliases'
+alias edit-keybinds='$EDITOR $XDG_CONFIG_HOME/sxhkd/sxhkdrc'
+alias edit-bashrc='$EDITOR $XDG_CONFIG_HOME/bash/.bashrc'
+alias edit-zshrc='$EDITOR $ZDOTDIR/.zshrc'
 
 # System helpers
 alias update-initramfs='sudo mkinitcpio -P'
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
-alias update-xresources="xrdb -remove * && xrdb -load $HOME/.Xresources"
+alias update-xresources='xrdb -remove * && xrdb -load $XDOTDIR/.Xresources'
 
 # Dotfile repo helpers
-alias dotfiles="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias dotfiles-list='dotfiles ls-tree -r main --name-only'
 
 # Pass aliases thru sudo
@@ -27,7 +27,7 @@ alias sudo='sudo '
 alias cformat='clang-format --style=file'
 
 # Open IDA Free
-alias ida="($XDG_DATA_HOME/idafree-8.3/ida64 &)"
+alias ida='($XDG_DATA_HOME/idafree-8.3/ida64 &)'
 
 # Colored command output
 alias grep='grep --color=auto'
@@ -36,7 +36,7 @@ alias ip='ip -color=auto'
 alias ls='ls --color=auto'
 
 # XDG compliance shims
-alias wget="wget --hsts-file=$XDG_DATA_HOME/wget-hsts"
+alias wget='wget --hsts-file=$XDG_DATA_HOME/wget-hsts'
 
 # Fancy LS
 alias l='eza'
