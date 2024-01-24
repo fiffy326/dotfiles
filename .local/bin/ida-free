@@ -1,0 +1,4 @@
+#!/bin/sh
+
+(nohup "$XDG_DATA_HOME/idafree-8.3/ida64" &) > /dev/null
+exit
