@@ -26,9 +26,6 @@ alias sudo='sudo '
 # Format a C/C++ file
 alias cformat='clang-format --style=file'
 
-# Open IDA Free
-alias ida='($XDG_DATA_HOME/idafree-8.3/ida64 &)'
-
 # Colored command output
 alias grep='grep --color=auto'
 alias diff='diff --color=auto'
