@@ -1,0 +1,6 @@
+#!/bin/zsh
+
+export blah="$(grep client.so /proc/$(pidof hl2_linux)/maps | head -n 1 | cut -d - -f1)"
+export DDDD="$(printf "0x%X\n" $((0x$blah + 0x3c856f)))"
+export FFFD="$(printf "0x%X\n" $(($DDDD + 4)))"
+grep -a -insecure "/proc/$(pidof hl2_linux)/cmdline" && sudo gdb -p $(pidof hl2_linux) -ex "set {int}$DDDD = 0x90909090" -ex "set {short}$FFFD = 0x9090" -batch
