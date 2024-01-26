@@ -1,1 +1,0 @@
-/home/emma/.config/X11/.xinitrc

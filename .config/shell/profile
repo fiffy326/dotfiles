@@ -3,5 +3,5 @@
 source "$HOME/.config/shell/env"
 
 if [ "$(tty)" = '/dev/tty1' ]; then
-	pgrep "$WM" || startx "$XDG_CONFIG_HOME/X11/.xinitrc"
+	pgrep "$WM" || startx "$XDOTDIR/.xinitrc"
 fi
