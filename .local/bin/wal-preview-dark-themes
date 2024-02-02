@@ -1,0 +1,17 @@
+#!/bin/sh
+
+wal --theme |\
+	sed -n '/Dark/,/Light/ p' |\
+	grep '-' |\
+	sed 's/ - //g' > /tmp/pywal-dark-themes.txt
+
+cat /tmp/pywal-dark-themes.txt |
+	while read theme;
+	do
+		wal --theme "$theme"
+		echo '________________________________________'
+		echo "$theme" | figlet
+		fastfetch
+		echo '________________________________________'
+		sleep 2.5
+	done
