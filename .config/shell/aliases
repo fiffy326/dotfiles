@@ -45,6 +45,7 @@ alias eza='eza					\
 	--icons=always				\
 	--smart-group				\
 	--octal-permissions			\
+	--no-quotes                 \
 	--group-directories-first'
 
 # Turn the display off
