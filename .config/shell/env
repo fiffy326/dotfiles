@@ -2,6 +2,8 @@
 
 # Add directories to the $PATH
 export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.local/bin/utilities"
+export PATH="$PATH:$HOME/.local/bin/app-wrappers"
 
 # XDG base directories
 export XDG_CONFIG_HOME="$HOME/.config"
