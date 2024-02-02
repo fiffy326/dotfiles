@@ -47,6 +47,9 @@ alias eza='eza					\
 	--octal-permissions			\
 	--group-directories-first'
 
+# Turn the display off
+alias sleep-display="xset dpms force off"
+
 # Command shortcuts
 alias nv='nvim'
 alias calc='qalc'
