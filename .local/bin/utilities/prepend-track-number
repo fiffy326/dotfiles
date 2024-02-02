@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Prepends the track number to the file name.
+#
+# This script assumes that the file doesn't already have the track number added
+# to the file name, and that track number ID3 metadata exists.
+#
+# Usage:
+#   prepend_track_number "file1.mp3 file2.mp3 file3.mp3"
+#   prepend_track_number "*.wav"
+
+prepend_track_number()
+{
+    cp "$1" "$1.bak"
+
+    track_number="$(mediainfo --Output="General;%Track/Position%" "$1")"
+    if [ "$track_number" -lt 10 ]; then
+        new_file_name="0$track_number. $1"
+    else
+        new_file_name="$track_number. $1"
+    fi
+    mv "$1" "$new_file_name"
+}
+
+shopt -s nullglob
+
+for file in $1
+do
+    prepend_track_number "$file"
+done
+
+shopt -u nullglob
