@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Add local executables to the $PATH
+# Add directories to the $PATH
 export PATH="$PATH:$HOME/.local/bin"
 
 # XDG base directories
@@ -12,16 +12,25 @@ export XDG_DATA_DIRS='/usr/local/share:/usr/share'
 export XDG_CONFIG_DIRS='/etc/xdg'
 
 # XDG user directories
-export XDG_DESKTOP_DIR="$(xdg-user-dir DESKTOP)"
-export XDG_DOCUMENTS_DIR="$(xdg-user-dir DOCUMENTS)"
-export XDG_DOWNLOAD_DIR="$(xdg-user-dir DOWNLOAD)"
-export XDG_MUSIC_DIR="$(xdg-user-dir MUSIC)"
-export XDG_PICTURES_DIR="$(xdg-user-dir PICTURES)"
-export XDG_PUBLICSHARE_DIR="$(xdg-user-dir PUBLICSHARE)"
-export XDG_TEMPLATES_DIR="$(xdg-user-dir TEMPLATES)"
-export XDG_VIDEOS_DIR="$(xdg-user-dir VIDEOS)"
+XDG_DESKTOP_DIR="$(xdg-user-dir DESKTOP)"
+XDG_DOCUMENTS_DIR="$(xdg-user-dir DOCUMENTS)"
+XDG_DOWNLOAD_DIR="$(xdg-user-dir DOWNLOAD)"
+XDG_MUSIC_DIR="$(xdg-user-dir MUSIC)"
+XDG_PICTURES_DIR="$(xdg-user-dir PICTURES)"
+XDG_PUBLICSHARE_DIR="$(xdg-user-dir PUBLICSHARE)"
+XDG_TEMPLATES_DIR="$(xdg-user-dir TEMPLATES)"
+XDG_VIDEOS_DIR="$(xdg-user-dir VIDEOS)"
+export                  \
+    XDG_DESKTOP_DIR     \
+    XDG_DOCUMENTS_DIR   \
+    XDG_DOWNLOAD_DIR    \
+    XDG_MUSIC_DIR       \
+    XDG_PICTURES_DIR    \
+    XDG_PUBLICSHARE_DIR \
+    XDG_TEMPLATES_DIR   \
+    XDG_VIDEOS_DIR
 
-# XDG compliance shims
+# XDG compliance workarounds
 export HISTFILE="$XDG_STATE_HOME/shell/history"
 export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
 export XDOTDIR="$XDG_CONFIG_HOME/X11"
@@ -38,15 +47,19 @@ export PYTHONPYCACHEPREFIX="$XDG_CACHE_HOME/python"
 export PYTHON_HISTORY="$XDG_STATE_HOME/python/history"
 export NODE_REPL_HISTORY="$XDG_DATA_HOME/node_repl_history"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
+export NUGET_PACKAGES="$XDG_CACHE_HOME/NuGetPackages"
 export _JAVA_OPTIONS="-Djava.util.prefs.userRoot=$XDG_CONFIG_HOME/java"
 
-# Fix for Ghidra and other Java-based applications on dwm
+# Fix for Ghidra/Java rendering issue on dwm
 export _JAVA_AWT_WM_NONREPARENTING=1
+
+# Get the current login shell
+LOGIN_SHELL="$(getent passwd "$USER" | awk -F: '{print $7}')"
 
 # Program preferences
 export WM='dwm'
-export SHELL="$(getent passwd $USER | awk -F: '{print $7}')" # Login shell
-export SXHKD_SHELL='/bin/sh'                                 # System shell
+export SHELL="$LOGIN_SHELL"  # Login shell
+export SXHKD_SHELL='/bin/sh' # System shell
 export TERMINAL='st'
 export BROWSER='firefox'
 export OPENER='xdg-open'
