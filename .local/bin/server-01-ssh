@@ -1,0 +1,7 @@
+#!/bin/sh
+
+ip="$(secret-tool lookup server-01 ip)"
+port="$(secret-tool lookup server-01 port)"
+user="$(secret-tool lookup server-01 user)"
+
+ssh -p "$port" -i "$HOME/.ssh/id_rsa" "$user@$ip"
