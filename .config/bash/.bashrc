@@ -1,9 +1,6 @@
 # If not running interactively, do nothing
 [[ $- != *i* ]] && return
 
-HISTSIZE=100000
-HISTFILESIZE=100000
-
 # Colored prompt
 PS1='\[\e[97;1m\][\[\e[38;5;147m\]\u\[\e[97m\]@\[\e[38;5;153m\]\h \[\e[0;97m\]\W\[\e[97;1m\]]\[\e[97m\]\$ \[\e[0m\]'
 

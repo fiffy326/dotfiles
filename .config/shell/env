@@ -58,6 +58,11 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 # Get the current login shell
 LOGIN_SHELL="$(getent passwd "$USER" | awk -F: '{print $7}')"
 
+# Shell history size
+export HISTSIZE=100000
+export SAVEHIST=100000
+export HISTFILESIZE=100000
+
 # Program preferences
 export WM='dwm'
 export SHELL="$LOGIN_SHELL"  # Login shell

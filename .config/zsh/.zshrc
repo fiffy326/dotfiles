@@ -1,6 +1,3 @@
-HISTSIZE=100000
-SAVEHIST=100000
-
 # Colored prompt
 autoload -Uz promptinit && promptinit
 prompt fade blue
