@@ -61,5 +61,3 @@ alias matrix='cmatrix -abs -u 2 -C green'
 alias aquarium='asciiquarium'
 alias bonsai='cbonsai -li'
 alias art='arttime'
-alias moon='phoon'
-alias weather="curl --silent https://wttr.in/brisbane | sed -E 's/(Follow.*|Weather report.*)//g'"
