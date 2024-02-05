@@ -59,9 +59,8 @@ set info size
 # Show directory size (number of files)
 set dircounts
 
-# File previewer with syntax highlighting
-# (located at ~/.local/bin/lf-previewer)
-set previewer 'lf-previewer'
+# File previewer script
+set previewer '~/.config/lf/preview.sh'
 
 
 #####################
