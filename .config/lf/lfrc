@@ -67,11 +67,6 @@ set previewer '~/.config/lf/preview.sh'
 # String Formatting #
 #####################
 
-# Cursor format (hovered item) [defaults]
-#set cursorparentfmt  "\033[7m"   # Highlight (invert)
-#set cursoractivefmt  "\033[7m"   # Highlight (invert)
-#set cursorpreviewfmt "\033[7;2m" # Dim
-
 # Cursor format (hovered item) [compatible with st]
 set cursorparentfmt  "\033[4m" # Underline
 set cursoractivefmt  "\033[7m" # Highlight (invert)
@@ -172,5 +167,3 @@ set ifs "\n"
 
 # Save command history
 set history true
-
-# vim:set ts=4 sts=4 sw=4:
