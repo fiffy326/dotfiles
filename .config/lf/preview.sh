@@ -1,44 +1,62 @@
 #!/bin/sh
 
-cache_dir="$XDG_CACHE_HOME/lf"
+file="$1"
 
-file_path="$1"
+thumbnail_dir="$XDG_CACHE_HOME/lf"
+[ ! -d "$thumbnail_dir" ] && mkdir -p "$thumbnail_dir"
 
-file_extension="$(\
-    # Dereference symlinks
-    printf '%s\n' "$(readlink -f "$file_path")" |\
+thumbnail_file="$thumbnail_dir/thumbnail.$(\
+    stat --printf '%n%i%F%s%W%Y' -- "$(readlink -f "$file")" |\
+    sha256sum | awk '{print $1}').jpg"
 
-    # Make lowercase
-    awk '{print tolower($0)}' |\
-
-    # Extract the file's extension from its path (if it has one).
-    awk -F '.' '{print $NF}'
-)"
-
-case "$file_extension" in
-    md)
-        glow "$file_path"
+case "$(printf '%s' "$(readlink -f "$file")" | awk '{print tolower($0)}')" in
+    *.wav|*.mp3|*.flac|*.m4a|*.wma|*.ape|*.ac3|*.spx|*.opus|*.mka|*.og[agx]|*.as[fx])
+        exiftool "$file"
         ;;
 
-    png|jpg|jpeg|webp|gif)
-        chafa --polite on --size="$2x$3" "$file_path"
+    *.bmp|*.jpg|*.jpeg|*.png|*.xpm|*.webp|*.tiff|*.gif|*.jfif|*.ico)
+        chafa --polite on -s "$4x" "$file"
         ;;
 
-    rar)
-        unrar l "$file_path"
+    *.svg)
+        [ ! -f "$thumbnail_file" ] && convert -flatten "$file" "$thumbnail_file"
+        chafa --polite on -s "$4x" "$thumbnail_file"
         ;;
 
-    zip)
-        unzip -l "$file_path"
+    *.xcf)
+        [ ! -f "$thumbnail_file" ] && convert -flatten "$file" "$thumbnail_file"
+        chafa --polite on -s "$4x" "$thumbnail_file"
         ;;
 
-    mp4|mp3|mkv|wav|flac)
-        mediainfo "$file_path"
+    *.avi|*.mp4|*.wmv|*.dat|*.3gp|*.ogv|*.mkv|*.mpg|*.mpeg|*.vob|*.m2v|*.mov|*.webm|*.ts|*.mts|*.m4v|*.qt|*.divx|*.r[am]|*.fl[icv])
+        [ ! -f "$thumbnail_file" ] && ffmpegthumbnailer -i "$file" -o "$thumbnail_file" -s 0 -q 5
+        chafa --polite on -s "$4x" "$thumbnail_file"
         ;;
 
-    *)
-        bat --paging=never --style=numbers --terminal-width "$(($2-5))" -f "$file_path"
+    *.pdf)
+        [ ! -f "$thumbnail_file" ] && pdftoppm -jpeg -f 1 -singlefile "$file" > "$thumbnail_file"
+        chafa --polite on -s "$4x" "$thumbnail_file"
         ;;
+
+    *.epub)
+        [ ! -f "$thumbnail_file" ] && epub-thumbnailer "$file" "$thumbnail_file" 1024
+        chafa --polite on -s "$4x" "$thumbnail_file"
+        ;;
+
+    *.doc) catdoc "$file" ;;
+    *.docx) docx2txt "$file" ;;
+    *.odt|*.ods|*.odp|*.sxw) odt2txt "$file" ;;
+    *.tar.gz|*.tgz) tar tzf "$file" ;;
+    *.tar.bz2|*.tbz2) tar tjf "$file" ;;
+    *.tar.txz|*.txz) xz --list "$file" ;;
+    *.tar) tar tf "$file" ;;
+    *.zip|*.jar|*.war|*.ear|*.oxt|*.fcstd|*.fcbak) unzip -l "$file" ;;
+    *.gz) gzip -l "$file" ;;
+    *.7z) 7z l "$file" ;;
+    *.rar) unrar l "$file" ;;
+    *.iso) iso-info --no-header -l "$file" ;;
+    *.o) nm "$file" ;;
+    *.md) glow "$file" ;;
+    *.[1-8]) man "$file" ;;
+    *) (file -ibL "$file" | grep -q 'text' && bat -f --paging=never --style=plain "$file") || file -Lb "$file" ;;
 esac
-
-exit 0
