@@ -1,4 +1,4 @@
 #!/bin/sh
 
 (cat "$XDG_CACHE_HOME/wal/sequences" &)
-source "$XDG_CACHE_HOME/wal/colors-tty.sh"
+. "$XDG_CACHE_HOME/wal/colors-tty.sh"
