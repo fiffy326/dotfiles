@@ -1,6 +1,9 @@
 #!/bin/sh
 
-source "$HOME/.config/shell/env"
+. "$HOME/.config/shell/env"
+
+[ -n "$BASH_VERSION" ] && [ -f "$HOME/.bashrc" ] && . "$HOME/.bashrc"
+[ -n "$ZSH_VERSION" ] && [ -f "$ZDOTDIR/.zshrc" ] && . "$ZDOTDIR/.zshrc"
 
 if [ "$(tty)" = '/dev/tty1' ]; then
 	pgrep "$WM" || startx "$XDOTDIR/.xinitrc"
