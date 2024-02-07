@@ -31,15 +31,6 @@ alias grep='grep --color=auto'
 alias diff='diff --color=auto'
 alias ip='ip -color=auto'
 alias ls='ls --color=auto'
-
-# XDG compliance shims
-alias wget='wget --hsts-file=$XDG_DATA_HOME/wget-hsts'
-
-# Fancy LS
-alias l='eza'
-alias ll='eza --long'
-alias la='eza --all'
-alias lla='eza --long --all'
 alias eza='eza					\
 	--sort=name                 \
 	--icons=always				\
@@ -48,17 +39,26 @@ alias eza='eza					\
 	--no-quotes                 \
 	--group-directories-first'
 
-# Turn the display off
+# Turn off the display
 alias display-sleep="xset dpms force off"
 
 # Command shortcuts
+alias l='eza'
+alias ll='eza --long'
+alias la='eza --all'
+alias lla='eza --long --all'
 alias nv='nvim'
+alias vim='nvim'
 alias calc='qalc'
-alias todo='task'
 alias fetch='fastfetch'
+alias feh='feh -Tslideshow'
+alias colorpicker='colorpicker --one-shot --short --preview'
+alias todo='task'
 alias iftop='sudo iftop -i wlp8s0'
-alias matrix='cmatrix -abs -u 2 -C green'
 alias aquarium='asciiquarium'
 alias bonsai='cbonsai -li'
 alias art='arttime'
 alias fm='(pcmanfm &); exit'
+
+# XDG compliance workarounds
+alias wget='wget --hsts-file=$XDG_DATA_HOME/wget-hsts'
