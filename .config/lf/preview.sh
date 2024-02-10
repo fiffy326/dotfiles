@@ -43,6 +43,11 @@ case "$(printf '%s' "$(readlink -f "$file")" | awk '{print tolower($0)}')" in
         chafa --polite on -s "$4x" "$thumbnail_file"
         ;;
 
+    *.html)
+        [ ! -f "$thumbnail_file" ] && wkhtmltoimage --enable-local-file-access --crop-w 640 "$file" "$thumbnail_file"
+        chafa --polite on -s "$4x" "$thumbnail_file"
+        ;;
+
     *.doc) catdoc "$file" ;;
     *.docx) docx2txt "$file" ;;
     *.odt|*.ods|*.odp|*.sxw) odt2txt "$file" ;;
@@ -58,5 +63,6 @@ case "$(printf '%s' "$(readlink -f "$file")" | awk '{print tolower($0)}')" in
     *.o) nm "$file" ;;
     *.md) glow "$file" ;;
     *.[1-8]) man "$file" ;;
+    *.json|*.jsonc|*.jsonl) bat -f --paging=never --style=plain "$file" ;;
     *) (file -ibL "$file" | grep -q 'text' && bat -f --paging=never --style=plain "$file") || file -Lb "$file" ;;
 esac
