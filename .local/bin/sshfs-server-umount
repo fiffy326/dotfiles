@@ -1,0 +1,8 @@
+#!/bin/sh
+
+server_id="$1"
+mount_point="/mnt/server-$server_id"
+
+[ ! -d "$mount_point" ] && exit 0
+sudo umount -Rl "$mount_point"
+sudo rm -rf "$mount_point"
