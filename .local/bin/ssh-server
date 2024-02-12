@@ -1,11 +1,9 @@
 #!/bin/sh
 
 server_id="$1"
+ssh_key="$HOME/.ssh/id_rsa"
+ssh_host="$(secret-tool lookup server_id "$server_id" field ipv4)"
+ssh_port="$(secret-tool lookup server_id "$server_id" field ssh_port)"
+ssh_user="$(secret-tool lookup server_id "$server_id" field ssh_user)"
 
-key="$HOME/.ssh/id_rsa"
-
-ipv4="$(secret-tool lookup server_id "$server_id" field ipv4)"
-port="$(secret-tool lookup server_id "$server_id" field ssh_port)"
-user="$(secret-tool lookup server_id "$server_id" field ssh_user)"
-
-ssh -p "$port" -i "$key" "$user@$ipv4"
+ssh -p "$ssh_port" -i "$ssh_key" "$ssh_user@$ssh_host"
