@@ -47,3 +47,12 @@ div[role="menuitem"][id="message-thread"] {display: none;}         /* Create thr
 div[role="menuitem"][id="message-mark-unread"] {display: none;}    /* Mark as unread     */
 div[role="menuitem"][id="message-add-reaction-1"] {display: none;} /* Add super reaction */
 /* div[role="menuitem"][id="message-add-reaction-0"] {display: none;} Add reaction */
+
+/* Hide the [bot] tag next to webhook usernames (Matrix bridge messages) */
+.rem__931aa.botTag__4211a,
+.botTagCozy_dd88d1,
+.botTag__11e95,
+.botTagRegular_c89c9a,
+.botTag__4211a {
+  display: none;
+}
