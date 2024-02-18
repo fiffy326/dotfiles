@@ -1,10 +1,10 @@
 # Config editing helpers
-alias edit-env='$EDITOR $XDG_CONFIG_HOME/shell/env'
+alias edit-env='$EDITOR $XDG_CONFIG_HOME/shell/env.sh'
 alias edit-xinitrc='$EDITOR $XDOTDIR/.xinitrc'
 alias edit-xresources='$EDITOR $XDOTDIR/.Xresources'
 alias edit-xmodmap='$EDITOR $XDOTDIR/.Xmodmap'
-alias edit-profile='$EDITOR $XDG_CONFIG_HOME/shell/profile'
-alias edit-aliases='$EDITOR $XDG_CONFIG_HOME/shell/aliases'
+alias edit-profile='$EDITOR $XDG_CONFIG_HOME/shell/profile.sh'
+alias edit-aliases='$EDITOR $XDG_CONFIG_HOME/shell/aliases.sh'
 alias edit-keybinds='$EDITOR $XDG_CONFIG_HOME/sxhkd/sxhkdrc'
 alias edit-bashrc='$EDITOR $XDG_CONFIG_HOME/bash/.bashrc'
 alias edit-zshrc='$EDITOR $ZDOTDIR/.zshrc'

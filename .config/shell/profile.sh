@@ -1,5 +1,5 @@
 # Load environment variables
-. "$HOME/.config/shell/env"
+. "$HOME/.config/shell/env.sh"
 
 # Load the correct RC file for the current shell
 [ -n "$BASH_VERSION" ] && [ -f "$HOME/.bashrc" ] && . "$HOME/.bashrc"

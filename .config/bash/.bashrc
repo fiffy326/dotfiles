@@ -11,8 +11,8 @@ shopt -s autocd checkwinsize globstar histappend
 HISTCONTROL=ignoreboth
 
 # Shell-independent files
-. "$XDG_CONFIG_HOME/shell/aliases"
-. "$XDG_CONFIG_HOME/shell/colors"
+. "$XDG_CONFIG_HOME/shell/aliases.sh"
+. "$XDG_CONFIG_HOME/shell/colors.sh"
 
 # Enable bash-preexec plugin
 [[ -f '/usr/share/bash-preexec/bash-preexec.sh' ]] &&\

@@ -1,1 +1,1 @@
-/home/emma/.config/shell/profile
+/home/emma/.config/shell/profile.sh

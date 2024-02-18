@@ -13,8 +13,8 @@ zstyle :compinstall filename "$ZDOTDIR/.zshrc"
 autoload -Uz compinit && compinit -d "$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION"
 
 # Shell-independent files
-source "$XDG_CONFIG_HOME/shell/aliases"
-source "$XDG_CONFIG_HOME/shell/colors"
+source "$XDG_CONFIG_HOME/shell/aliases.sh"
+source "$XDG_CONFIG_HOME/shell/colors.sh"
 
 # Plugins
 source '/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
