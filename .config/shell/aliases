@@ -1,5 +1,3 @@
-#!/bin/sh
-
 # Config editing helpers
 alias edit-env='$EDITOR $XDG_CONFIG_HOME/shell/env'
 alias edit-xinitrc='$EDITOR $XDOTDIR/.xinitrc'
