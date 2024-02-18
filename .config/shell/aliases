@@ -18,7 +18,7 @@ alias update-xresources='xrdb -remove * && xrdb -load $XDOTDIR/.Xresources'
 
 # Dotfile repo helpers
 alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
-alias dotfiles-list='dotfiles ls-tree -r main --name-only'
+alias dotfiles-list='dotfiles ls-tree -r main --name-only | sort'
 
 # Pass aliases thru sudo
 alias sudo='sudo '
@@ -40,7 +40,7 @@ alias eza='eza					\
 	--group-directories-first'
 
 # Turn off the display
-alias display-sleep="xset dpms force off"
+alias goodnight="xset dpms force off"
 
 # Command shortcuts
 alias l='eza'
