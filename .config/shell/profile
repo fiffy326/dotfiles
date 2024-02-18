@@ -6,6 +6,4 @@
 [ -n "$ZSH_VERSION" ] && [ -f "$ZDOTDIR/.zshrc" ] && . "$ZDOTDIR/.zshrc"
 
 # Start an X session if one doesn't already exist
-if [ "$(tty)" = '/dev/tty1' ]; then
-	pgrep "$WM" || startx "$XDOTDIR/.xinitrc"
-fi
+[ "$(tty)" = '/dev/tty1' ] && (pgrep "$WM" || startx "$XDOTDIR/.xinitrc")
