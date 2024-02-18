@@ -1,5 +1,3 @@
-#!/bin/sh
-
 . "$HOME/.config/shell/env"
 
 [ -n "$BASH_VERSION" ] && [ -f "$HOME/.bashrc" ] && . "$HOME/.bashrc"
