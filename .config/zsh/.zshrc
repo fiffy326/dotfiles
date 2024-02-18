@@ -13,9 +13,9 @@ zstyle :compinstall filename "$ZDOTDIR/.zshrc"
 autoload -Uz compinit && compinit -d "$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION"
 
 # Shell-independent files
-source "$XDG_CONFIG_HOME/shell/aliases.sh"
-source "$XDG_CONFIG_HOME/shell/colors.sh"
+. "$XDG_CONFIG_HOME/shell/aliases.sh"
+. "$XDG_CONFIG_HOME/shell/colors.sh"
 
 # Plugins
-source '/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
-source '/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh'
+. '/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
+. '/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh'
