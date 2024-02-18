@@ -1,6 +1,11 @@
 #!/bin/sh
 
-server_id="$1"
+if [ -z "$1" ]; then
+    server_id=1
+else
+    server_id="$1"
+fi
+
 mount_point="/mnt/server-$server_id"
 ssh_key="$HOME/.ssh/id_rsa"
 ssh_host="$(secret-tool lookup server_id "$server_id" field ipv4)"
