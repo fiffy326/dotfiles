@@ -61,7 +61,6 @@ case "$(printf '%s' "$(readlink -f "$file")" | awk '{print tolower($0)}')" in
     *.rar) unrar l "$file" ;;
     *.iso) iso-info --no-header -l "$file" ;;
     *.o) nm "$file" ;;
-    *.md) glow "$file" ;;
     *.[1-8]) man "$file" ;;
     *.json|*.jsonc|*.jsonl) bat -f --paging=never --style=plain "$file" ;;
     *) (file -ibL "$file" | grep -q 'text' && bat -f --paging=never --style=plain "$file") || file -Lb "$file" ;;
