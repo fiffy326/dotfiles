@@ -62,6 +62,13 @@ case "$(printf '%s' "$(readlink -f "$file")" | awk '{print tolower($0)}')" in
     *.iso) iso-info --no-header -l "$file" ;;
     *.o) nm "$file" ;;
     *.[1-8]) man "$file" ;;
-    *.json|*.jsonc|*.jsonl) bat -f --paging=never --style=plain "$file" ;;
-    *) (file -ibL "$file" | grep -q 'text' && bat -f --paging=never --style=plain "$file") || file -Lb "$file" ;;
+    *)
+        if file -ibL "$file" | grep -q 'text'; then
+            bat -f --paging=never --style=plain "$file"
+        elif file -Lb "$file" | grep -q 'text'; then
+            bat -f --paging=never --style=plain "$file"
+        else
+            file -Lb "$file"
+        fi
+        ;;
 esac
