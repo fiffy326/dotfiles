@@ -28,7 +28,7 @@ case "$(printf '%s' "$(readlink -f "$file")" | awk '{print tolower($0)}')" in
         chafa --polite on -s "$4x" "$thumbnail_file"
         ;;
 
-    *.avi|*.mp4|*.wmv|*.dat|*.3gp|*.ogv|*.mkv|*.mpg|*.mpeg|*.vob|*.m2v|*.mov|*.webm|*.ts|*.mts|*.m4v|*.qt|*.divx|*.r[am]|*.fl[icv])
+    *.avi|*.mp4|*.wmv|*.dat|*.3gp|*.ogv|*.mkv|*.mpg|*.mpeg|*.vob|*.m2v|*.mov|*.webm|*.mts|*.m4v|*.qt|*.divx|*.r[am]|*.fl[icv])
         [ ! -f "$thumbnail_file" ] && ffmpegthumbnailer -i "$file" -o "$thumbnail_file" -s 0 -q 5
         chafa --polite on -s "$4x" "$thumbnail_file"
         ;;
