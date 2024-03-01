@@ -62,7 +62,7 @@ st.blinktimeout: 800
 st.bellvolume: 0
 st.termname: st-256color
 st.tabspaces: 8
-st.alpha: 0.90
+st.alpha: 0.95
 st.col_00: black
 st.col_01: red3
 st.col_02: green3
