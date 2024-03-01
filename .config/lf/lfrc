@@ -8,6 +8,7 @@ map x          :$$f                # Execute file (in background)
 map X          :!$f                # Execute file (in foreground)
 map o          :open               # Open file
 map r          :rename             # Rename file
+map <f-2>      :rename             # Rename file
 map a          :push %mkdir<space> # Create directory
 map <delete>   :trash              # Move file to trash
 map <c-delete> :delete             # Delete file permanently
