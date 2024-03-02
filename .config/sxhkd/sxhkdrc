@@ -1,6 +1,3 @@
-alt + shift + BackSpace
-    wezterm
-
 alt + shift + backslash
     st
 
@@ -10,9 +7,6 @@ alt + shift + t
 alt + shift + m
     $TERMINAL -e btop
 
-alt + shift + f
-    caprine
-
 alt + shift + w
     $BROWSER
 
@@ -21,6 +15,9 @@ alt + shift + s
 
 alt + shift + d
     discord
+
+alt + shift + f
+    nautilus
 
 ctrl + super + bracketleft
     bluetoothctl connect $HEADPHONES_NEW
