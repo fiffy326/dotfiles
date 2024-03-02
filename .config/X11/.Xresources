@@ -17,14 +17,14 @@ dwm.col_norm_bg: #212121
 dwm.col_norm_border: #4a4a4a
 dwm.col_sel_fg: #ffffff
 dwm.col_sel_bg: #212121
-dwm.col_sel_border: #ffffff
+dwm.col_sel_border: #a4caee
 dwm.col_urg_fg: #ffffff
 dwm.col_urg_bg: #c792ea
 dwm.col_urg_border: #c792ea
 dwm.col_title_fg: #ffffff
 dwm.col_title_bg: #212121
-dwm.col_title_border: #c792ea
-dwm.col_dmenu_hover: #c792ea
+dwm.col_title_border: #a4caee
+dwm.col_dmenu_hover: #a4caee
 dwm.momentaryalttags: 0
 dwm.ulinepad: 0
 dwm.ulinestroke: 3
@@ -42,7 +42,7 @@ dmenu.min_width: 800
 dmenu.col_norm_fg: #bbbbbb
 dmenu.col_norm_bg: #212121
 dmenu.col_sel_fg: #ffffff
-dmenu.col_sel_bg: #c792ea
+dmenu.col_sel_bg: #a4caee
 dmenu.col_out_fg: #000000
 dmenu.col_out_bg: #00ffff
 dmenu.lines: 0
