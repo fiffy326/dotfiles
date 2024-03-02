@@ -3,15 +3,15 @@
   "logo": {
     "source": "arch2",
     "color": {
-      "1": "magenta",
-      "2": "magenta",
-      "3": "magenta",
-      "4": "magenta",
-      "5": "magenta",
-      "6": "magenta",
-      "7": "magenta",
-      "8": "magenta",
-      "9": "magenta"
+      "1": "blue",
+      "2": "blue",
+      "3": "blue",
+      "4": "blue",
+      "5": "blue",
+      "6": "blue",
+      "7": "blue",
+      "8": "blue",
+      "9": "blue"
     },
     "padding": {
       "top": 0,
@@ -20,7 +20,7 @@
     }
   },
   "display": {
-    "color": "magenta"
+    "color": "blue"
   },
   "modules": [
     {
