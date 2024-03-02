@@ -1,10 +1,10 @@
 #!/bin/sh
 
-selector_color='#C792EA'
+selector_color='#a4caee'
 notify_duration='3000'
 notify_summary='Screenshot saved and copied to the clipboard.'
 timestamp_format='%F-%H%M%S'
-output_dir="$XDG_PICTURES_DIR/screenshots"
+output_dir="$XDG_PICTURES_DIR/Screenshots"
 
 output_path="$output_dir/$(date +"$timestamp_format").png"
 output_path_short="$(echo "$output_path" | sed s:"$HOME":~:)"
