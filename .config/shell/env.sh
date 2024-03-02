@@ -33,7 +33,6 @@ export                  \
 
 # XDG compliance workarounds
 export HISTFILE="$XDG_STATE_HOME/shell/history"
-export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
 export XDOTDIR="$XDG_CONFIG_HOME/X11"
 export XINITRC="$XDOTDIR/.xinitrc"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
@@ -50,6 +49,10 @@ export NODE_REPL_HISTORY="$XDG_DATA_HOME/node_repl_history"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export NUGET_PACKAGES="$XDG_CACHE_HOME/NuGetPackages"
 export _JAVA_OPTIONS="-Djava.util.prefs.userRoot=$XDG_CONFIG_HOME/java"
+
+if [ "$XDG_SESSION_DESKTOP" != "gnome" ]; then
+	export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
+fi
 
 # Fix Ghidra/Java rendering problems in dwm
 export _JAVA_AWT_WM_NONREPARENTING=1
@@ -82,6 +85,7 @@ export WALLPAPER="$XDG_PICTURES_DIR/wallpapers/cat-waves.png"
 export PYWAL_THEME='base16-materialer'
 export PYWAL_BG_COLOR='#212121'
 export BAT_THEME='Catppuccin-macchiato'
+export GTK_THEME='Sweet'
 
 # MAC addresses for bluetooth devices
 export HEADPHONES_NEW='AC:80:0A:22:5C:D4'
