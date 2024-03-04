@@ -3,7 +3,7 @@
 picom_cfg="$XDG_CONFIG_HOME/picom/picom.conf"
 
 case "$1" in
-    'on')
+    'glx')
         if grep -q 'backend = "xrender"' "$picom_cfg"; then
             sed -i 's/backend = "xrender"/backend = "glx"/g' "$picom_cfg"
             echo 'Picom backend changed to glx'
@@ -13,7 +13,7 @@ case "$1" in
         fi
         ;;
 
-    'off')
+    'xrender')
         if grep -q 'backend = "glx"' "$picom_cfg"; then
             sed -i 's/backend = "glx"/backend = "xrender"/g' "$picom_cfg"
             echo 'Picom backend changed to xrender'
