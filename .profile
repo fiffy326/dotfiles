@@ -1,0 +1,1 @@
+/home/emma/.config/shell/profile.sh
