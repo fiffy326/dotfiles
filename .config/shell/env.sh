@@ -81,7 +81,7 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export MANROFFOPT='-c'
 
 # Appearance preferences
-export WALLPAPER="$XDG_PICTURES_DIR/wallpapers/cat-waves.png"
+export WALLPAPER="/home/emma/.local/share/hydrus/db/client_files/f6a/6a21bb75e6e08ce096441a76c5438c3951af2035ad778362aec92dc4bd7d0dee.png"
 export PYWAL_THEME='base16-materialer'
 export PYWAL_BG_COLOR='#212121'
 export BAT_THEME='Catppuccin-macchiato'
