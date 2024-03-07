@@ -51,12 +51,7 @@ alias calc='qalc'
 alias fetch='fastfetch'
 alias feh='feh -Tslideshow'
 alias colorpicker='colorpicker --one-shot --short --preview'
-alias todo='task'
 alias iftop='sudo iftop -i wlp8s0'
-alias aquarium='asciiquarium'
-alias bonsai='cbonsai -li'
-alias art='arttime'
-alias fm='(pcmanfm &); exit'
 
 # XDG compliance workarounds
 alias wget='wget --hsts-file=$XDG_DATA_HOME/wget-hsts'
