@@ -40,6 +40,9 @@ alias eza='eza					\
 # Turn off the display
 alias goodnight="xset dpms force off"
 
+# Start Discord archive tunnel
+alias dcef-tunnel="ssh -p 35616 -i ~/.ssh/id_rsa -N -T -R 1337:localhost:21011 emma@trannersanctuary.com"
+
 # Command shortcuts
 alias l='eza'
 alias ll='eza --long'
