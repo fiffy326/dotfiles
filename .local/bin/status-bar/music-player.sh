@@ -22,6 +22,10 @@ fi
 artist="$(playerctl -p "$player" metadata artist |\
 	sed -E 's/\s*(\(|-).*//g')" # Remove featured artists/remix/etc.
 
+if [ -z "$artist" ]; then
+	exit 0
+fi
+
 title="$(playerctl -p "$player" metadata title |\
 	sed -E 's/\s*(\(|-).*//g')" # Remove featured artists/remix/etc.
 
