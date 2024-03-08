@@ -1,3 +1,0 @@
-#!/bin/sh
-
-alacritty --title 'Calendar' --command 'calcurse'
