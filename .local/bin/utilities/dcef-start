@@ -1,4 +1,0 @@
-#!/bin/sh
-
-docker start dcef
-tmux new-session -d -s tunnel "ssh -p 35616 -i ~/.ssh/id_rsa -N -T -R 1337:localhost:21011 emma@trannersanctuary.com"
