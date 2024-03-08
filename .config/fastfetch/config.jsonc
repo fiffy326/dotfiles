@@ -3,15 +3,15 @@
   "logo": {
     "source": "arch2",
     "color": {
-      "1": "blue",
-      "2": "blue",
-      "3": "blue",
-      "4": "blue",
-      "5": "blue",
-      "6": "blue",
-      "7": "blue",
-      "8": "blue",
-      "9": "blue"
+      "1": "bright_blue",
+      "2": "bright_blue",
+      "3": "bright_blue",
+      "4": "bright_blue",
+      "5": "bright_blue",
+      "6": "bright_blue",
+      "7": "bright_blue",
+      "8": "bright_blue",
+      "9": "bright_blue"
     },
     "padding": {
       "top": 0,
@@ -20,19 +20,28 @@
     }
   },
   "display": {
-    "color": "blue"
+    "color": "bright_blue",
+    "size": {
+      "maxPrefix": "GB",
+      "ndigits": 2
+    },
+    "separator": " "
   },
   "modules": [
     {
       "type": "title",
       "format": "{6}{7}{8}"
     },
-    "separator",
+    {
+      "type": "separator",
+    },
     {
       "type": "kernel",
       "format": "{2}"
     },
-    "packages",
+    {
+      "type": "packages"
+    },
     {
       "type": "shell",
       "format": "{3} {4}"
@@ -45,32 +54,49 @@
       "type": "wm",
       "format": "{2} ({3})"
     },
-    "break",
+    {
+      "type": "break"
+    },
     {
       "type": "cpu",
       "format": "{1}"
     },
     {
       "type": "gpu",
-      "forceVulkan": true,
-      "format": "{2}"
+      "format": "{2}",
+      "forceVulkan": true
     },
     {
       "type": "memory",
+      "key": "RAM",
       "format": "{1} / {2} ({3})"
     },
-    "break",
+    {
+      "type": "break"
+    },
     {
       "type": "disk",
-      "format": "{1} / {2} ({3})"
+      "key": "/        ",
+      "folders": "/",
+      "format": " {1}\t/  {2} ({3})"
     },
-    "break",
-    "uptime",
     {
-      "type": "battery",
-      "format": "{5} ({4})"
+      "type": "disk",
+      "key": "/ssd-nvme",
+      "folders": "/ssd-nvme",
+      "format": " {1}\t/ {2} ({3})"
     },
-    "break",
-    "colors"
+    {
+      "type": "disk",
+      "key": "/ssd-sata",
+      "folders": "/ssd-sata",
+      "format": "{1}\t/ {2} ({3})"
+    },
+    {
+      "type": "break"
+    },
+    {
+      "type": "colors"
+    }
   ]
 }
