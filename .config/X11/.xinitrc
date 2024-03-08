@@ -107,5 +107,5 @@ picom &
 sxhkd &
 numlockx &
 dwmblocks &
-start-ct-chat-archive &
+glava &
 exec "$WM"
