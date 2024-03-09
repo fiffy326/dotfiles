@@ -107,5 +107,4 @@ picom &
 sxhkd &
 numlockx &
 dwmblocks &
-glava &
 exec "$WM"
