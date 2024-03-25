@@ -1,0 +1,3 @@
+#!/bin/sh
+
+WINEPREFIX="$HOME/.local/share/wineprefixes/VIDE" wine "/opt/css-sdk/VIDE/VIDE.exe"
