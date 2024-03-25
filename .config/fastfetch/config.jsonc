@@ -94,7 +94,7 @@
       "type": "disk",
       "key": "/ssd-sata",
       "folders": "/ssd-sata",
-      "format": "{1}\t/ {2} ({3})"
+      "format": " {1}\t/ {2} ({3})"
     },
     {
       "type": "break"
