@@ -1,0 +1,15 @@
+#!/bin/sh
+
+movie_dir="$XDG_VIDEOS_DIR/movies"
+
+movie_files="$(ls "$movie_dir")"
+movie_names="$(echo "$movie_files" | sed -E 's/(.mkv|.mp4)//g')"
+
+movie_name="$(echo "$movie_names" | dmenu -l 20 -c -fn 'Iosevka NFM Medium:size=18')"
+movie_file="$(echo "$movie_files" | grep "$movie_name")"
+
+if [ -n "$movie_name" ]; then
+    notify-send 'Playing movie:' "$movie_name" -t 1250
+    sleep 1.25
+    mpv --fs "$movie_dir/$movie_file"
+fi

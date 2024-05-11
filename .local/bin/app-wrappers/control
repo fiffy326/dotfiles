@@ -1,0 +1,4 @@
+#!/bin/sh
+
+(nohup wine '/ssd-sata/fitgirl-games/CONTROL - Ultimate Edition/Control_DX12.exe' &) > /dev/null
+exit

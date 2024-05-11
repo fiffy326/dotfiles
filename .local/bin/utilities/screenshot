@@ -1,0 +1,56 @@
+#!/bin/sh
+
+selector_color='#a4caee'
+notify_duration='3000'
+notify_summary='Screenshot saved and copied to the clipboard.'
+timestamp_format='%F-%H%M%S'
+output_dir="$XDG_PICTURES_DIR/Screenshots"
+
+output_path="$output_dir/$(date +"$timestamp_format").png"
+output_path_short="$(echo "$output_path" | sed s:"$HOME":~:)"
+
+# Create output directory if it doesn't exist
+[ ! -d "$output_dir" ] && mkdir -p "$output_dir"
+
+screenshot_fullscreen() {
+    geometry="$(xrandr --current | grep 'primary' | awk '{print $4}')"
+    shotgun -g "$geometry" "$output_path"
+    notify-send -t "$notify_duration" \
+        "$notify_summary"             \
+        "$output_path_short"
+    xclip -selection 'clipboard' -t 'image/png' < "$output_path"
+}
+
+screenshot_region() {
+    geometry="$(hacksaw -s1 -g1 -c"$selector_color")"
+    if [ "$(echo "$geometry" | grep -e '[0-9].*x[0-9].*\+[0-9].*\+[0-9].*')" ]
+    then
+        shotgun -g "$geometry" "$output_path"
+        notify-send -t "$notify_duration" \
+            "$notify_summary"             \
+            "$output_path_short"
+        xclip -selection 'clipboard' -t 'image/png' < "$output_path"
+    else
+        notify-send -t "$notify_duration" \
+            'Screenshot aborted.'
+    fi
+}
+
+case "$1" in
+    '')
+        screenshot_fullscreen
+        ;;
+
+    'full'|'fullscreen')
+        screenshot_fullscreen
+        ;;
+
+    'region'|'selection'|'area')
+        screenshot_region
+        ;;
+
+    *)
+        echo "Invalid option: $1"
+        exit 1
+        ;;
+esac

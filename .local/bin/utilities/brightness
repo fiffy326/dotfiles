@@ -1,0 +1,29 @@
+#!/bin/sh
+
+active_display="$(xrandr --current | grep 'primary' | awk '{print $1}')"
+
+get_brightness() {
+	xrandr --current --verbose | grep 'Brightness' | awk '{print $2}'
+}
+
+set_brightness() {
+	xrandr --output "$active_display" --brightness "$1"
+}
+
+case "$1" in
+	'')
+		get_brightness
+		;;
+
+	'get')
+		get_brightness
+		;;
+
+	'set')
+		set_brightness "$2"
+		;;
+
+	*)
+		echo "Invalid option: $1"
+		;;
+esac

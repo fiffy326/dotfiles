@@ -1,0 +1,5 @@
+#!/bin/sh
+
+archive_file="$HOME"/Downloads/pacman-db-backups/"$(date +'%Y-%m-%d')".tar.bz2
+tar -cjf "$archive_file" /var/lib/pacman/local
+echo "Created pacman database backup: $archive_file"

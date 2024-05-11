@@ -1,0 +1,56 @@
+#!/bin/sh
+
+active_display="$(xrandr --current | grep 'primary' | awk '{print $1}')"
+
+get_backlight() {
+    case "$active_display" in
+        'DP-0'|'HDMI-0')
+            ddcutil getvcp 10 |\
+                grep -o 'current value\s*=\s*[0-9]*' |\
+                awk '{print $4}'
+            ;;
+
+        'eDP-1-1')
+            brightnessctl -d 'intel_backlight' get
+            ;;
+
+        *)
+            echo 'Unrecognized monitor'
+            ;;
+    esac
+}
+
+set_backlight() {
+    case "$active_display" in
+        'DP-0'|'HDMI-0')
+            sudo ddcutil setvcp 10 "$1"
+            ;;
+
+        'eDP-1-1')
+            brightnessctl -d 'intel_backlight' set "$1"
+            ;;
+
+        *)
+            echo 'Unrecognized monitor'
+            ;;
+
+    esac
+}
+
+case "$1" in
+    '')
+        get_backlight
+        ;;
+
+    'get')
+        get_backlight
+        ;;
+
+    'set')
+        set_backlight "$2"
+        ;;
+
+    *)
+        echo "Invalid option: $1"
+        ;;
+esac

@@ -1,0 +1,30 @@
+#!/bin/sh
+
+case "$1" in
+	'up')
+		amixer set Master "$2%+" > /dev/null
+		;;
+
+	'down')
+		amixer set Master "$2%-" > /dev/null
+		;;
+
+	'toggle')
+		amixer set Master toggle > /dev/null
+		;;
+	
+	'set')
+		amixer set Master "$2%" > /dev/null
+		;;
+
+	'get')
+		amixer get Master | grep -m1 -o '[0-9]*%' | sed 's/%//g'
+		;;
+
+	*)
+		echo "Invalid option: $1"
+		exit 1
+		;;
+esac
+
+kill -36 "$(pidof dwmblocks)"

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for subdir in */; do
+    dirname=$(echo "$subdir" | sed -e 's/\///g')
+    tar czvf "$dirname.tar.gz" "$dirname"
+done

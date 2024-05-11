@@ -1,0 +1,4 @@
+#!/bin/sh
+
+(nohup wine '/ssd-sata/fitgirl-games/Factorio/bin/x64/factorio.exe' &) > /dev/null
+exit

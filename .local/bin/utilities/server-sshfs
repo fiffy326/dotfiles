@@ -1,0 +1,18 @@
+#!/bin/sh
+
+if [ -z "$1" ]; then
+    server_id=1
+else
+    server_id="$1"
+fi
+
+mount_point="/mnt/server-$server_id"
+ssh_key="$HOME/.ssh/id_rsa"
+ssh_host="$(secret-tool lookup server_id "$server_id" field ipv4)"
+ssh_port="$(secret-tool lookup server_id "$server_id" field ssh_port)"
+ssh_user="$(secret-tool lookup server_id "$server_id" field ssh_user)"
+
+[ ! -d "$mount_point" ] && sudo mkdir -p "$mount_point"
+sudo sshfs -p "$ssh_port" \
+    -o allow_other,default_permissions,IdentityFile="$ssh_key" \
+    "$ssh_user@$ssh_host:/" "$mount_point"

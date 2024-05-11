@@ -1,0 +1,14 @@
+#!/bin/sh
+
+if [ -z "$1" ]; then
+    server_id=1
+else
+    server_id="$1"
+fi
+
+ssh_key="$HOME/.ssh/id_rsa"
+ssh_host="$(secret-tool lookup server_id "$server_id" field ipv4)"
+ssh_port="$(secret-tool lookup server_id "$server_id" field ssh_port)"
+ssh_user="$(secret-tool lookup server_id "$server_id" field ssh_user)"
+
+ssh -p "$ssh_port" -i "$ssh_key" "$ssh_user@$ssh_host"

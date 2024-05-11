@@ -1,0 +1,65 @@
+alt + shift + backslash
+    cool-retro-term
+
+alt + shift + t
+    thunderbird
+
+alt + shift + m
+    $TERMINAL -e btop
+
+alt + shift + w
+    $BROWSER
+
+alt + shift + s
+    spotify
+
+alt + shift + d
+    discord
+
+alt + shift + f
+    nautilus
+
+alt + shift + p
+    hydrus-client
+
+ctrl + super + bracketleft
+    bluetoothctl connect $HEADPHONES_NEW
+
+ctrl + super + bracketright
+    bluetoothctl connect $HEADPHONES_OLD
+
+ctrl + super + shift + bracketleft
+    bluetoothctl disconnect $HEADPHONES_NEW
+
+ctrl + super + shift + bracketright
+    bluetoothctl disconnect $HEADPHONES_OLD
+
+Print
+    screenshot region
+
+alt + Print
+    screenshot fullscreen
+
+XF86AudioPrev
+    playerctl previous
+
+XF86AudioNext
+    playerctl next
+
+XF86AudioPlay
+    playerctl play-pause
+
+XF86AudioMute
+    volume toggle
+
+XF86AudioLowerVolume
+    volume down 5
+
+XF86AudioRaiseVolume
+    volume up 5
+
+XF86MonBrightnessUp
+    brightness up 10
+
+XF86MonBrightnessDown
+    brightness down 10

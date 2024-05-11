@@ -1,0 +1,171 @@
+###################
+#   Keybindings   #
+###################
+
+map <enter>    :shell              # Run a shell command
+map `          :!true              # Show output for previous shell command
+map x          :$$f                # Execute file (in background)
+map X          :!$f                # Execute file (in foreground)
+map o          :open               # Open file
+map r          :rename             # Rename file
+map <f-2>      :rename             # Rename file
+map a          :push %mkdir<space> # Create directory
+map <delete>   :trash              # Move file to trash
+map <c-delete> :delete             # Delete file permanently
+map gs         :fzf_search         # Fuzzy file search with fzf and ripgrep
+map p          :set preview!       # Toggle preview panel
+map .          :set hidden!        # Toggle hidden files
+map u          :extract
+
+
+###################
+#     General     #
+###################
+
+# List of ratios of pane widths
+set ratios "1:2:3"
+
+# Space left at the top and bottom of the screen
+set scrolloff 10
+
+# Send mouse events as input
+set mouse true
+
+# Refresh directory every 1 second
+set period 1
+
+# Use relative line numbers
+set relativenumber true
+
+# Show absolute number for current line
+set number true
+
+# Scrolling can wrap around the file list
+set wrapscroll true
+
+# Searching can wrap around the file list
+set wrapscan true
+
+# Ignore case in sort and search patterns
+set ignorecase true
+
+# Don't show hidden files by default
+set hidden false
+
+# Spaces to show for a tab character
+set tabstop 4
+
+# Show file size
+set info size
+
+# Show directory size (number of files)
+set dircounts
+
+# File previewer script
+set previewer '~/.config/lf/preview.sh'
+
+
+#####################
+# String Formatting #
+#####################
+
+# Cursor format (hovered item) [compatible with st]
+set cursorparentfmt  "\033[4m" # Underline
+set cursoractivefmt  "\033[7m" # Highlight (invert)
+set cursorpreviewfmt "\033[4m" # Underline
+
+# Prompt format (top left)
+set promptfmt "\033[32;1m%u@%h\033[0m:\033[34;1m%d\033[0m\033[1m%f\033[0m"
+
+# Error format (bottom left)
+set errorfmt "\033[7;31;47m"     # Red bg, white fg
+
+
+###################
+#    Functions    #
+###################
+
+# Move file to trash
+cmd trash %trash-put $fx
+
+# Permanently delete file
+cmd delete ${{
+    set -f
+    printf "Permanently delete $fx? [y/n]\n"
+    read ans
+    [ "$ans" = "y" ] && rm -rf $fx
+}}
+
+# Open text files in $EDITOR, and open everything else using $OPENER
+cmd open &{{
+    case $(file --mime-type -Lb $f) in
+        text/*) lf -remote "send $id \$$EDITOR \$fx";;
+        *) for f in $fx; do $OPENER $f > /dev/null 2> /dev/null & done;;
+    esac
+}}
+
+# Extract archive using the correct command
+cmd extract ${{
+    set -f
+    case $f in
+        *.tar.bz|*.tar.bz2|*.tbz|*.tbz2) tar xjvf $f;;
+        *.tar.gz|*.tgz) tar xzvf $f;;
+        *.tar.xz|*.txz) tar xJvf $f;;
+        *.zip) unzip $f;;
+        *.rar) unrar x $f;;
+        *.7z) 7z x $f;;
+    esac
+}}
+
+# Compress files with tar and gzip
+cmd tar ${{
+    set -f
+    mkdir $1
+    cp -r $fx $1
+    tar czf $1.tar.gz $1
+    rm -rf $1
+}}
+
+# Compress files with zip
+cmd zip ${{
+    set -f
+    mkdir $1
+    cp -r $fx $1
+    zip -r $1.zip $1
+    rm -rf $1
+}}
+
+# Interactively search the contents of files under the current directory and
+# select a file from the results. Requires fzf and ripgrep to be installed.
+cmd fzf_search ${{
+    RG_PREFIX="rg --column --line-number --no-heading --hidden --color=always --smart-case "
+    res="$(
+        FZF_DEFAULT_COMMAND="$RG_PREFIX ''" \
+            fzf --bind "change:reload:$RG_PREFIX {q} || true" \
+            --ansi --layout=reverse --header 'Search in files' \
+            | cut -d':' -f1 | sed 's/\\/\\\\/g;s/"/\\"/g'
+    )"
+    [ -n "$res" ] && lf -remote "send $id select \"$res\""
+}}
+
+
+###################
+#      Shell      #
+###################
+
+# Shell command interpreter
+set shell sh
+
+# Shell flag used to pass shell commands
+set shellflag '-c'
+
+# Shell command options:
+# -e = exit on error
+# -u = error on unset variable
+set shellopts '-eu'
+
+# Shell command internal field separator (IFS)
+set ifs "\n"
+
+# Save command history
+set history true
