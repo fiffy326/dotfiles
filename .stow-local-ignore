@@ -6,3 +6,4 @@
 ^/\.shellcheckrc$
 ^/\.stowrc$
 ^/\.stylua\.toml$
+^/\.taplo\.toml$
