@@ -4,6 +4,9 @@
 [submodule "submodules/github.com/catppuccin/fuzzel"]
 	path = submodules/github.com/catppuccin/fuzzel
 	url = https://github.com/catppuccin/fuzzel.git
+[submodule "submodules/github.com/catppuccin/zathura"]
+	path = submodules/github.com/catppuccin/zathura
+	url = https://github.com/catppuccin/zathura.git
 [submodule "submodules/github.com/GitAlias/gitalias"]
 	path = submodules/github.com/GitAlias/gitalias
 	url = https://github.com/GitAlias/gitalias.git
