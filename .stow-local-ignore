@@ -1,3 +1,8 @@
+.+\.bak$
+.+\.log$
+.+\.sw[\w]$
+.+\.t[e]?mp$
+.+~$
 ^/\.editorconfig$
 ^/\.git
 ^/\.gitattributes$
