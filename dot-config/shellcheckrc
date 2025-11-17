@@ -1,0 +1,91 @@
+# Documentation: https://github.com/koalaman/shellcheck/wiki/Directive
+
+#######################
+### Optional Checks ###
+#######################
+
+# Check: add-default-case
+# Brief: Suggest adding a default case in `case` statements.
+# Wrong: case $? in 0) echo 'Success';; esac
+# Right: case $? in 0) echo 'Success';; *) echo 'Fail' ;; esac
+enable=add-default-case
+
+# Check: avoid-negated-conditions
+# Brief: Suggest removing unnecessary comparison negations.
+# Wrong: [ ! "$var" -eq 1 ]
+# Right: [ "$var" -ne 1 ]
+enable=avoid-negated-conditions
+
+# Check: avoid-nullary-conditions
+# Brief: Suggest explicitly using -n in `[ $var ]`.
+# Wrong: [ "$var" ]
+# Right: [ -n "$var" ]
+enable=avoid-nullary-conditions
+
+# Check: check-extra-masked-returns
+# Brief: Check for additional cases where exit codes are masked.
+# Wrong: rm -r "$(get_chroot_dir)/home"
+# Right: set -e; dir="$(get_chroot_dir)"; rm -r "$dir/home"
+enable=check-extra-masked-returns
+
+# Check: check-set-e-suppressed
+# Brief: Notify when set -e is suppressed during function invocation.
+# Wrong: set -e; func() { cp *.txt ~/backup; rm *.txt; }; func && echo ok
+# Right: set -e; func() { cp *.txt ~/backup; rm *.txt; }; func; echo ok
+enable=check-set-e-suppressed
+
+# Check: check-unassigned-uppercase
+# Brief: Warn when uppercase variables are unassigned.
+# Wrong: echo $VAR
+# Right: VAR=hello; echo $VAR
+enable=check-unassigned-uppercase
+
+# Check: deprecate-which
+# Brief: Suggest 'command -v' instead of 'which'.
+# Wrong: which javac
+# Right: command -v javac
+enable=deprecate-which
+
+# Check: quote-safe-variables
+# Brief: Suggest quoting variables without metacharacters.
+# Wrong: var=hello; echo $var
+# Right: var=hello; echo "$var"
+enable=quote-safe-variables
+
+# Check: require-double-brackets
+# Brief: Require [[ and warn about [ in Bash/Ksh.
+# Wrong: [ -e /etc/issue ]
+# Right: [[ -e /etc/issue ]]
+enable=require-double-brackets
+
+# Check: require-variable-braces
+# Brief: Suggest putting braces around all variable references.
+# Wrong: var=hello; echo $var
+# Right: var=hello; echo ${var}
+enable=require-variable-braces
+
+# Check: useless-use-of-cat
+# Brief: Check for Useless Use Of Cat (UUOC).
+# Wrong: cat foo | grep bar
+# Right: grep bar foo
+enable=useless-use-of-cat
+
+########################
+### External Sources ###
+########################
+
+# Allow ShellCheck to follow external sources referenced by `source` and `.`
+# statements, even when they have not been explicitly listed as input files.
+external-sources=true
+
+# Look for external sources relative to the current file's parent directory.
+source-path=SCRIPTDIR
+
+# Look for external sources relative to the user's local binary directories.
+source-path=/home/emma/bin
+source-path=/home/emma/.local/bin
+
+# Look for external sources relative to the default Arch Linux search paths.
+source-path=/usr/local/sbin
+source-path=/usr/local/bin
+source-path=/usr/bin
