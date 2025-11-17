@@ -1,0 +1,6 @@
+*.bak
+*.log
+*.sw\w
+*.temp
+*.tmp
+*~
