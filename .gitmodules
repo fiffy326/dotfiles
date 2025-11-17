@@ -13,6 +13,9 @@
 [submodule "submodules/github.com/catppuccin/imv"]
 	path = submodules/github.com/catppuccin/imv
 	url = https://github.com/catppuccin/imv.git
+[submodule "submodules/github.com/catppuccin/mako"]
+	path = submodules/github.com/catppuccin/mako
+	url = https://github.com/catppuccin/mako.git
 [submodule "submodules/github.com/catppuccin/zathura"]
 	path = submodules/github.com/catppuccin/zathura
 	url = https://github.com/catppuccin/zathura.git
