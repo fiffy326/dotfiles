@@ -10,6 +10,9 @@
 [submodule "submodules/github.com/catppuccin/fuzzel"]
 	path = submodules/github.com/catppuccin/fuzzel
 	url = https://github.com/catppuccin/fuzzel.git
+[submodule "submodules/github.com/catppuccin/ghostty"]
+	path = submodules/github.com/catppuccin/ghostty
+	url = https://github.com/catppuccin/ghostty.git
 [submodule "submodules/github.com/catppuccin/glamour"]
 	path = submodules/github.com/catppuccin/glamour
 	url = https://github.com/catppuccin/glamour.git
