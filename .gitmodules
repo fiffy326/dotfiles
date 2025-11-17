@@ -1,9 +1,9 @@
 [submodule "submodules/github.com/GitAlias/gitalias"]
 	path = submodules/github.com/GitAlias/gitalias
 	url = https://github.com/GitAlias/gitalias.git
-[submodule "submodules/github.com/taifuhime/typhoonhud"]
-	path = submodules/github.com/taifuhime/typhoonhud
-	url = https://github.com/taifuhime/typhoonhud.git
 [submodule "submodules/github.com/rtldg/goodfootsteps"]
 	path = submodules/github.com/rtldg/goodfootsteps
 	url = https://github.com/rtldg/goodfootsteps.git
+[submodule "submodules/github.com/taifuhime/typhoonhud"]
+	path = submodules/github.com/taifuhime/typhoonhud
+	url = https://github.com/taifuhime/typhoonhud.git
