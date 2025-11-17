@@ -5,3 +5,4 @@
 ^/\.gitmodules$
 ^/\.shellcheckrc$
 ^/\.stowrc$
+^/\.stylua\.toml$
