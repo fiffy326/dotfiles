@@ -5,3 +5,4 @@
     path = config.d/diff.inc
     path = config.d/init.inc
     path = config.d/user.inc
+    path = ../delta/delta.inc
