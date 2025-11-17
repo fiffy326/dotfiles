@@ -1,0 +1,1 @@
+../../../submodules/github.com/catppuccin/delta/catppuccin.gitconfig
