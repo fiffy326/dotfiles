@@ -16,6 +16,9 @@
 [submodule "submodules/github.com/catppuccin/glamour"]
 	path = submodules/github.com/catppuccin/glamour
 	url = https://github.com/catppuccin/glamour.git
+[submodule "submodules/github.com/catppuccin/hyprland"]
+	path = submodules/github.com/catppuccin/hyprland
+	url = https://github.com/catppuccin/hyprland.git
 [submodule "submodules/github.com/catppuccin/imv"]
 	path = submodules/github.com/catppuccin/imv
 	url = https://github.com/catppuccin/imv.git
