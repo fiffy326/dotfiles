@@ -17,3 +17,102 @@ trim_trailing_whitespace = false
 
 [*.{json,jsonc}]
 indent_size = 2
+
+[[shell]]
+shell_variant = auto
+indent_style = space
+indent_size = 2
+binary_next_line = true
+switch_case_indent = true
+space_redirects = true
+function_next_line = false
+minify = false
+simplify = true
+ignore = false
+
+[[bash]]
+shell_variant = bash
+indent_style = space
+indent_size = 2
+binary_next_line = true
+switch_case_indent = true
+space_redirects = true
+function_next_line = false
+minify = false
+simplify = true
+ignore = false
+
+[*.bash]
+shell_variant = bash
+indent_style = space
+indent_size = 2
+binary_next_line = true
+switch_case_indent = true
+space_redirects = true
+function_next_line = false
+minify = false
+simplify = true
+ignore = false
+
+[{\.,dot-}bash{_login,_logout,_profile,rc}]
+shell_variant = bash
+indent_style = space
+indent_size = 2
+binary_next_line = true
+switch_case_indent = true
+space_redirects = true
+function_next_line = false
+minify = false
+simplify = true
+ignore = false
+
+[*.sh]
+shell_variant = posix
+indent_style = space
+indent_size = 2
+binary_next_line = true
+switch_case_indent = true
+space_redirects = true
+function_next_line = false
+minify = false
+simplify = true
+ignore = false
+
+[{\.,dot-}{profile,rc}]
+shell_variant = posix
+indent_style = space
+indent_size = 2
+binary_next_line = true
+switch_case_indent = true
+space_redirects = true
+function_next_line = false
+minify = false
+simplify = true
+ignore = false
+
+[*.zsh]
+shell_variant = auto
+indent_style = space
+indent_size = 2
+binary_next_line = true
+switch_case_indent = true
+space_redirects = true
+function_next_line = false
+minify = false
+simplify = true
+ignore = true
+
+[{\.,dot-}z{login,logout,profile,shenv,shrc}]
+shell_variant = auto
+indent_style = space
+indent_size = 2
+binary_next_line = true
+switch_case_indent = true
+space_redirects = true
+function_next_line = false
+minify = false
+simplify = true
+ignore = true
+
+[submodules/**]
+ignore = true
