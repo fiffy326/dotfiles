@@ -1,0 +1,6 @@
+# shellcheck disable=SC2148
+
+for file in "${XDG_CONFIG_HOME:-"${HOME}/.config"}"/shell/{sh,zsh}/rc.d/*(N); do
+  # shellcheck source=/dev/null
+  [[ -r "${file}" ]] && source "${file}"
+done && unset file

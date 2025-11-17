@@ -1,0 +1,5 @@
+# shellcheck shell=sh
+
+path_prepend "${HOME}/.local/bin"
+
+# TODO: Start a Wayland session.

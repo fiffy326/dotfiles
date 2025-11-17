@@ -1,0 +1,6 @@
+# shellcheck shell=sh
+
+for file in "${XDG_CONFIG_HOME:-"${HOME}/.config"}"/shell/sh/rc.d/*; do
+  # shellcheck source=/dev/null
+  [ -r "${file}" ] && . "${file}"
+done && unset file
