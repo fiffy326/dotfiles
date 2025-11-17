@@ -1,0 +1,4 @@
+include "./themes/catppuccin-mocha"
+set font "Monaspace Krypton Var 12"
+set database "sqlite"
+set recolor false
