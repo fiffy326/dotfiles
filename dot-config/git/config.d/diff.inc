@@ -1,0 +1,2 @@
+[diff]
+    mnemonicPrefix = true

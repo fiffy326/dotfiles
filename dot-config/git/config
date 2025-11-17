@@ -1,0 +1,7 @@
+[include]
+    path = config.d/alias.inc
+    path = config.d/core.inc
+    path = config.d/credential.inc
+    path = config.d/diff.inc
+    path = config.d/init.inc
+    path = config.d/user.inc

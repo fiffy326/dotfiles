@@ -1,0 +1,1 @@
+../../../../submodules/github.com/GitAlias/gitalias/gitalias.txt
