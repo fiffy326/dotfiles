@@ -1,0 +1,8 @@
+# Documentation: https://github.com/JohnnyMorganz/StyLua#options
+
+indent_type = "Spaces"
+indent_width = 3
+collapse_simple_statement = "FunctionOnly"
+
+[sort_requires]
+enabled = true
