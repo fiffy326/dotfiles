@@ -1,3 +1,9 @@
+[submodule "submodules/github.com/catppuccin/foot"]
+	path = submodules/github.com/catppuccin/foot
+	url = https://github.com/catppuccin/foot.git
+[submodule "submodules/github.com/catppuccin/fuzzel"]
+	path = submodules/github.com/catppuccin/fuzzel
+	url = https://github.com/catppuccin/fuzzel.git
 [submodule "submodules/github.com/GitAlias/gitalias"]
 	path = submodules/github.com/GitAlias/gitalias
 	url = https://github.com/GitAlias/gitalias.git
@@ -7,6 +13,3 @@
 [submodule "submodules/github.com/taifuhime/typhoonhud"]
 	path = submodules/github.com/taifuhime/typhoonhud
 	url = https://github.com/taifuhime/typhoonhud.git
-[submodule "submodules/github.com/catppuccin/foot"]
-	path = submodules/github.com/catppuccin/foot
-	url = https://github.com/catppuccin/foot.git
