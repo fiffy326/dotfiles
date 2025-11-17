@@ -3,4 +3,5 @@
 ^/\.gitattributes$
 ^/\.gitignore$
 ^/\.gitmodules$
+^/\.shellcheckrc$
 ^/\.stowrc$
