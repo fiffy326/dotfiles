@@ -7,5 +7,6 @@
 ^/\.stowrc$
 ^/\.stylua\.toml$
 ^/\.taplo\.toml$
+^/\.vscode
 ^/LICENSE$
 ^/README\.md$
