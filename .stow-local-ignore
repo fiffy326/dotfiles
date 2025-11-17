@@ -8,3 +8,4 @@
 ^/\.stylua\.toml$
 ^/\.taplo\.toml$
 ^/LICENSE$
+^/README\.md$
