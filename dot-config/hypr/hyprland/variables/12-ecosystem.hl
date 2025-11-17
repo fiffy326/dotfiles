@@ -1,0 +1,20 @@
+source = ../theme.hl
+
+# ecosystem {
+
+    # Type: bool
+    # Default: false
+    # Summary: disable the popup that shows up when you update hyprland to a new version.
+    # no_update_news = false
+
+    # Type: bool
+    # Default: false
+    # Summary: disable the popup that shows up twice a year encouraging to donate.
+    # no_donation_nag = false
+
+    # Type: bool
+    # Default: false
+    # Summary: whether to enable [permission control](https://wiki.hypr.land/Configuring/Permissions).
+    # enforce_permissions = false
+
+# }

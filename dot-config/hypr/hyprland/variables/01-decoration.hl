@@ -1,0 +1,198 @@
+source = ../theme.hl
+
+# decoration {
+
+    # Type: int
+    # Default: 0
+    # Summary: rounded corners' radius (in layout px)
+    # rounding = 0
+
+    # Type: float
+    # Default: 2.0
+    # Summary: adjusts the curve used for rounding corners, larger is smoother, 2.0 is a circle, 4.0 is a squircle, 1.0 is a triangular corner. [1.0 - 10.0]
+    # rounding_power = 2.0
+
+    # Type: float
+    # Default: 1.0
+    # Summary: opacity of active windows. [0.0 - 1.0]
+    # active_opacity = 1.0
+
+    # Type: float
+    # Default: 1.0
+    # Summary: opacity of inactive windows. [0.0 - 1.0]
+    # inactive_opacity = 1.0
+
+    # Type: float
+    # Default: 1.0
+    # Summary: opacity of fullscreen windows. [0.0 - 1.0]
+    # fullscreen_opacity = 1.0
+
+    # Type: bool
+    # Default: true
+    # Summary: enables dimming of parents of modal windows
+    # dim_modal = true
+
+    # Type: bool
+    # Default: false
+    # Summary: enables dimming of inactive windows
+    # dim_inactive = false
+
+    # Type: float
+    # Default: 0.5
+    # Summary: how much inactive windows should be dimmed [0.0 - 1.0]
+    # dim_strength = 0.5
+
+    # Type: float
+    # Default: 0.2
+    # Summary: how much to dim the rest of the screen by when a special workspace is open. [0.0 - 1.0]
+    # dim_special = 0.2
+
+    # Type: float
+    # Default: 0.4
+    # Summary: how much the `dimaround` window rule should dim by. [0.0 - 1.0]
+    # dim_around = 0.4
+
+    # Type: str
+    # Default: [[Empty]]
+    # Summary: a path to a custom shader to be applied at the end of rendering. See `examples/screenShader.frag` for an example.
+    # screen_shader = [[Empty]]
+
+    # Type: bool
+    # Default: true
+    # Summary: whether the window border should be a part of the window
+    # border_part_of_window = true
+
+    # blur {
+
+        # Type: bool
+        # Default: true
+        # Summary: enable kawase window background blur
+        # enabled = true
+
+        # Type: int
+        # Default: 8
+        # Summary: blur size (distance)
+        # size = 8
+
+        # Type: int
+        # Default: 1
+        # Summary: the amount of passes to perform
+        # passes = 1
+
+        # Type: bool
+        # Default: true
+        # Summary: make the blur layer ignore the opacity of the window
+        # ignore_opacity = true
+
+        # Type: bool
+        # Default: true
+        # Summary: whether to enable further optimizations to the blur. Recommended to leave on, as it will massively improve performance.
+        # new_optimizations = true
+
+        # Type: bool
+        # Default: false
+        # Summary: if enabled, floating windows will ignore tiled windows in their blur. Only available if new_optimizations is true. Will reduce overhead on floating blur significantly.
+        # xray = false
+
+        # Type: float
+        # Default: 0.0117
+        # Summary: how much noise to apply. [0.0 - 1.0]
+        # noise = 0.0117
+
+        # Type: float
+        # Default: 0.8916
+        # Summary: contrast modulation for blur. [0.0 - 2.0]
+        # contrast = 0.8916
+
+        # Type: float
+        # Default: 0.8172
+        # Summary: brightness modulation for blur. [0.0 - 2.0]
+        # brightness = 0.8172
+
+        # Type: float
+        # Default: 0.1696
+        # Summary: Increase saturation of blurred colors. [0.0 - 1.0]
+        # vibrancy = 0.1696
+
+        # Type: float
+        # Default: 0.0
+        # Summary: How strong the effect of `vibrancy` is on dark areas . [0.0 - 1.0]
+        # vibrancy_darkness = 0.0
+
+        # Type: bool
+        # Default: false
+        # Summary: whether to blur behind the special workspace (note: expensive)
+        # special = false
+
+        # Type: bool
+        # Default: false
+        # Summary: whether to blur popups (e.g. right-click menus)
+        # popups = false
+
+        # Type: float
+        # Default: 0.2
+        # Summary: works like ignorealpha in layer rules. If pixel opacity is below set value, will not blur. [0.0 - 1.0]
+        # popups_ignorealpha = 0.2
+
+        # Type: bool
+        # Default: false
+        # Summary: whether to blur input methods (e.g. fcitx5)
+        # input_methods = false
+
+        # Type: float
+        # Default: 0.2
+        # Summary: works like ignorealpha in layer rules. If pixel opacity is below set value, will not blur. [0.0 - 1.0]
+        # input_methods_ignorealpha = 0.2
+
+    # }
+
+    # shadow {
+
+        # Type: bool
+        # Default: true
+        # Summary: enable drop shadows on windows
+        # enabled = true
+
+        # Type: int
+        # Default: 4
+        # Summary: Shadow range ("size") in layout px
+        # range = 4
+
+        # Type: int
+        # Default: 3
+        # Summary: in what power to render the falloff (more power, the faster the falloff) [1 - 4]
+        # render_power = 3
+
+        # Type: bool
+        # Default: false
+        # Summary: if enabled, will make the shadows sharp, akin to an infinite render power
+        # sharp = false
+
+        # Type: bool
+        # Default: true
+        # Summary: if true, the shadow will not be rendered behind the window itself, only around it.
+        # ignore_window = true
+
+        # Type: color
+        # Default: 0xee1a1a1a
+        # Summary: shadow's color. Alpha dictates shadow's opacity.
+        # color = 0xee1a1a1a
+
+        # Type: color
+        # Default: unset
+        # Summary: inactive shadow color. (if not set, will fall back to color)
+        # color_inactive = unset
+
+        # Type: vec2
+        # Default: [0, 0]
+        # Summary: shadow's rendering offset.
+        # offset = [0, 0]
+
+        # Type: float
+        # Default: 1.0
+        # Summary: shadow's scale. [0.0 - 1.0]
+        # scale = 1.0
+
+    # }
+
+# }

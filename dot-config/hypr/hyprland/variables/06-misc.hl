@@ -1,0 +1,190 @@
+source = ../theme.hl
+
+# misc {
+
+    # Type: bool
+    # Default: false
+    # Summary: disables the random Hyprland logo / anime girl background. :(
+    # disable_hyprland_logo = false
+
+    # Type: bool
+    # Default: false
+    # Summary: disables the Hyprland splash rendering. (requires a monitor reload to take effect)
+    # disable_splash_rendering = false
+
+    # Type: bool
+    # Default: false
+    # Summary: disables notification popup when a monitor fails to set a suitable scale
+    # disable_scale_notification = false
+
+    # Type: color
+    # Default: 0xffffffff
+    # Summary: Changes the color of the splash text (requires a monitor reload to take effect).
+    # col.splash = 0xffffffff
+
+    # Type: string
+    # Default: Sans
+    # Summary: Set the global default font to render the text including debug fps/notification, config error messages and etc., selected from system fonts.
+    # font_family = Sans
+
+    # Type: string
+    # Default: [[Empty]]
+    # Summary: Changes the font used to render the splash text, selected from system fonts (requires a monitor reload to take effect).
+    # splash_font_family = [[Empty]]
+
+    # Type: int
+    # Default: -1
+    # Summary: Enforce any of the 3 default wallpapers. Setting this to `0` or `1` disables the anime background. `-1` means "random". [-1/0/1/2]
+    # force_default_wallpaper = -1
+
+    # Type: bool
+    # Default: true
+    # Summary: controls the VFR status of Hyprland. Heavily recommended to leave enabled to conserve resources.
+    # vfr = true
+
+    # Type: int
+    # Default: 0
+    # Summary: controls the VRR (Adaptive Sync) of your monitors. 0 - off, 1 - on, 2 - fullscreen only, 3 - fullscreen with `video` or `game` content type [0/1/2/3]
+    # vrr = 0
+
+    # Type: bool
+    # Default: false
+    # Summary: If DPMS is set to off, wake up the monitors if the mouse moves.
+    # mouse_move_enables_dpms = false
+
+    # Type: bool
+    # Default: false
+    # Summary: If DPMS is set to off, wake up the monitors if a key is pressed.
+    # key_press_enables_dpms = false
+
+    # Type: bool
+    # Default: true
+    # Summary: Name virtual keyboards after the processes that create them. E.g. /usr/bin/fcitx5 will have hl-virtual-keyboard-fcitx5.
+    # name_vk_after_proc = true
+
+    # Type: bool
+    # Default: true
+    # Summary: Will make mouse focus follow the mouse when drag and dropping. Recommended to leave it enabled, especially for people using focus follows mouse at 0.
+    # always_follow_on_dnd = true
+
+    # Type: bool
+    # Default: true
+    # Summary: If true, will make keyboard-interactive layers keep their focus on mouse move (e.g. wofi, bemenu)
+    # layers_hog_keyboard_focus = true
+
+    # Type: bool
+    # Default: false
+    # Summary: If true, will animate manual window resizes/moves
+    # animate_manual_resizes = false
+
+    # Type: bool
+    # Default: false
+    # Summary: If true, will animate windows being dragged by mouse, note that this can cause weird behavior on some curves
+    # animate_mouse_windowdragging = false
+
+    # Type: bool
+    # Default: false
+    # Summary: If true, the config will not reload automatically on save, and instead needs to be reloaded with `hyprctl reload`. Might save on battery.
+    # disable_autoreload = false
+
+    # Type: bool
+    # Default: false
+    # Summary: Enable window swallowing
+    # enable_swallow = false
+
+    # Type: str
+    # Default: [[Empty]]
+    # Summary: The _class_ regex to be used for windows that should be swallowed (usually, a terminal). To know more about the list of regex which can be used [use this cheatsheet](https://github.com/ziishaned/learn-regex/blob/master/README.md).
+    # swallow_regex = [[Empty]]
+
+    # Type: str
+    # Default: [[Empty]]
+    # Summary: The _title_ regex to be used for windows that should _not_ be swallowed by the windows specified in swallow_regex  (e.g. wev). The regex is matched against the parent (e.g. Kitty) window's title on the assumption that it changes to whatever process it's running.
+    # swallow_exception_regex = [[Empty]]
+
+    # Type: bool
+    # Default: false
+    # Summary: Whether Hyprland should focus an app that requests to be focused (an `activate` request)
+    # focus_on_activate = false
+
+    # Type: bool
+    # Default: true
+    # Summary: Whether mouse moving into a different monitor should focus it
+    # mouse_move_focuses_monitor = true
+
+    # Type: bool
+    # Default: false
+    # Summary: if true, will allow you to restart a lockscreen app in case it crashes
+    # allow_session_lock_restore = false
+
+    # Type: bool
+    # Default: false
+    # Summary: if true, keep rendering workspaces below your lockscreen
+    # session_lock_xray = false
+
+    # Type: color
+    # Default: 0x111111
+    # Summary: change the background color. (requires enabled `disable_hyprland_logo`)
+    # background_color = 0x111111
+
+    # Type: bool
+    # Default: true
+    # Summary: close the special workspace if the last window is removed
+    # close_special_on_empty = true
+
+    # Type: int
+    # Default: 0
+    # Summary: if there is a fullscreen or maximized window, decide whether a new tiled window opened should replace it, stay behind or disable the fullscreen/maximized state. 0 - behind, 1 - takes over, 2 - unfullscreen/unmaxize [0/1/2]
+    # new_window_takes_over_fullscreen = 0
+
+    # Type: bool
+    # Default: false
+    # Summary: if true, closing a fullscreen window makes the next focused window fullscreen
+    # exit_window_retains_fullscreen = false
+
+    # Type: int
+    # Default: 1
+    # Summary: if enabled, windows will open on the workspace they were invoked on. 0 - disabled, 1 - single-shot, 2 - persistent (all children too)
+    # initial_workspace_tracking = 1
+
+    # Type: bool
+    # Default: true
+    # Summary: whether to enable middle-click-paste (aka primary selection)
+    # middle_click_paste = true
+
+    # Type: int
+    # Default: 15
+    # Summary: the maximum limit for renderunfocused windows' fps in the background (see also [Window-Rules](https://wiki.hypr.land/Configuring/Window-Rules/#dynamic-rules) - `renderunfocused`)
+    # render_unfocused_fps = 15
+
+    # Type: bool
+    # Default: false
+    # Summary: disable the warning if XDG environment is externally managed
+    # disable_xdg_env_checks = false
+
+    # Type: bool
+    # Default: false
+    # Summary: disable the warning if hyprland-qtutils is not installed
+    # disable_hyprland_qtutils_check = false
+
+    # Type: int
+    # Default: 1000
+    # Summary: delay after which the "lockdead" screen will appear in case a lockscreen app fails to cover all the outputs (5 seconds max)
+    # lockdead_screen_delay = 1000
+
+    # Type: bool
+    # Default: true
+    # Summary: whether to enable the ANR (app not responding) dialog when your apps hang
+    # enable_anr_dialog = true
+
+    # Type: int
+    # Default: 5
+    # Summary: number of missed pings before showing the ANR dialog
+    # anr_missed_pings = 5
+
+    # Type: bool
+    # Default: false
+    # Summary: whether to apply minsize and maxsize rules to tiled windows
+    # size_limits_tiled = false
+
+# }

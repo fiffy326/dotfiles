@@ -1,0 +1,124 @@
+source = ../theme.hl
+
+# general {
+
+    # Type: int
+    # Default: 1
+    # Summary: size of the border around windows
+    # border_size = 1
+
+    # Type: bool
+    # Default: false
+    # Summary: disable borders for floating windows
+    # no_border_on_floating = false
+
+    # Type: int
+    # Default: 5
+    # Summary: gaps between windows, also supports css style gaps (top, right, bottom, left -> 5,10,15,20)
+    # gaps_in = 5
+
+    # Type: int
+    # Default: 20
+    # Summary: gaps between windows and monitor edges, also supports css style gaps (top, right, bottom, left -> 5,10,15,20)
+    # gaps_out = 20
+
+    # Type: int
+    # Default: 0
+    # Summary: gaps between windows and monitor edges for floating windows, also supports css style gaps (top, right, bottom, left -> 5 10 15 20). -1 means default
+    # float_gaps = 0
+
+    # Type: int
+    # Default: 0
+    # Summary: gaps between workspaces. Stacks with gaps_out.
+    # gaps_workspaces = 0
+
+    # Type: gradient
+    # Default: 0xff444444
+    # Summary: border color for inactive windows
+    # col.inactive_border = 0xff444444
+
+    # Type: gradient
+    # Default: 0xffffffff
+    # Summary: border color for the active window
+    # col.active_border = 0xffffffff
+
+    # Type: gradient
+    # Default: 0xffffaaff
+    # Summary: inactive border color for window that cannot be added to a group (see `denywindowfromgroup` dispatcher)
+    # col.nogroup_border = 0xffffaaff
+
+    # Type: gradient
+    # Default: 0xffff00ff
+    # Summary: active border color for window that cannot be added to a group
+    # col.nogroup_border_active = 0xffff00ff
+
+    # Type: str
+    # Default: dwindle
+    # Summary: which layout to use. [dwindle/master]
+    # layout = dwindle
+
+    # Type: bool
+    # Default: false
+    # Summary: if true, will not fall back to the next available window when moving focus in a direction where no window was found
+    # no_focus_fallback = false
+
+    # Type: bool
+    # Default: false
+    # Summary: enables resizing windows by clicking and dragging on borders and gaps
+    # resize_on_border = false
+
+    # Type: int
+    # Default: 15
+    # Summary: extends the area around the border where you can click and drag on, only used when `general:resize_on_border` is on.
+    # extend_border_grab_area = 15
+
+    # Type: bool
+    # Default: true
+    # Summary: show a cursor icon when hovering over borders, only used when `general:resize_on_border` is on.
+    # hover_icon_on_border = true
+
+    # Type: bool
+    # Default: false
+    # Summary: master switch for allowing tearing to occur. See [the Tearing page](https://wiki.hypr.land/Configuring/Tearing).
+    # allow_tearing = false
+
+    # Type: int
+    # Default: 0
+    # Summary: force floating windows to use a specific corner when being resized (1-4 going clockwise from top left, 0 to disable)
+    # resize_corner = 0
+
+    # Type: bool
+    # Default: true
+    # Summary: whether parent windows of modals will be interactive
+    # modal_parent_blocking = true
+
+    # snap {
+
+        # Type: bool
+        # Default: false
+        # Summary: enable snapping for floating windows
+        # enabled = false
+
+        # Type: int
+        # Default: 10
+        # Summary: minimum gap in pixels between windows before snapping
+        # window_gap = 10
+
+        # Type: int
+        # Default: 10
+        # Summary: minimum gap in pixels between window and monitor edges before snapping
+        # monitor_gap = 10
+
+        # Type: bool
+        # Default: false
+        # Summary: if true, windows snap such that only one border's worth of space is between them
+        # border_overlap = false
+
+        # Type: bool
+        # Default: false
+        # Summary: if true, snapping will respect gaps between windows(set in general:gaps_in)
+        # respect_gaps = false
+
+    # }
+
+# }

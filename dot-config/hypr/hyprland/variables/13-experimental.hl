@@ -1,0 +1,10 @@
+source = ../theme.hl
+
+# experimental {
+
+    # Type: bool
+    # Default: false
+    # Summary: enable color management protocol
+    # xx_color_management_v4 = false
+
+# }

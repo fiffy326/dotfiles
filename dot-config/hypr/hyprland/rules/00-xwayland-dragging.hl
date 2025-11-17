@@ -1,0 +1,2 @@
+# Fix window dragging issues that can occur with certain XWayland applications.
+windowrulev2 = nofocus, class:(^$), title:(^$), xwayland:1, floating: 1, fullscreen:0, pinned:0

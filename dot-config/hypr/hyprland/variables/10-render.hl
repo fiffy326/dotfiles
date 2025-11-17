@@ -1,0 +1,60 @@
+source = ../theme.hl
+
+# render {
+
+    # Type: int
+    # Default: 0
+    # Summary: Enables direct scanout. Direct scanout attempts to reduce lag when there is only one fullscreen application on a screen (e.g. game). It is also recommended to set this to false if the fullscreen application shows graphical glitches. 0 - off, 1 - on, 2 - auto (on with content type 'game')
+    # direct_scanout = 0
+
+    # Type: bool
+    # Default: true
+    # Summary: Whether to expand undersized textures along the edge, or rather stretch the entire texture.
+    # expand_undersized_textures = true
+
+    # Type: bool
+    # Default: false
+    # Summary: Disables back buffer and bottom layer rendering.
+    # xp_mode = false
+
+    # Type: int
+    # Default: 2
+    # Summary: Whether to enable a fade animation for CTM changes (hyprsunset). 2 means "auto" which disables them on Nvidia.
+    # ctm_animation = 2
+
+    # Type: int
+    # Default: 2
+    # Summary: Passthrough color settings for fullscreen apps when possible. 0 - off, 1 - always, 2 - hdr only
+    # cm_fs_passthrough = 2
+
+    # Type: bool
+    # Default: true
+    # Summary: Whether the color management pipeline should be enabled or not (requires a restart of Hyprland to fully take effect)
+    # cm_enabled = true
+
+    # Type: bool
+    # Default: true
+    # Summary: Report content type to allow monitor profile autoswitch (may result in a black screen during the switch)
+    # send_content_type = true
+
+    # Type: int
+    # Default: 1
+    # Summary: Auto-switch to HDR in fullscreen when needed. 0 - off, 1 - switch to `cm, hdr`, 2 - switch to `cm, hdredid`
+    # cm_auto_hdr = 1
+
+    # Type: bool
+    # Default: false
+    # Summary: Automatically uses triple buffering when needed, improves FPS on underpowered devices.
+    # new_render_scheduling = false
+
+    # Type: int
+    # Default: 3
+    # Summary: Enable CM without shader. 0 - disable, 1 - whenever possible, 2 - DS and passthrough only, 3 - disable and ignore CM issues
+    # non_shader_cm = 3
+
+    # Type: int
+    # Default: 0
+    # Summary: Default transfer function for displaying SDR apps. 0 - Treat unspecified as sRGB, 1 - Treat unspecified as Gamma 2.2, 2 - Treat unspecified and sRGB as Gamma 2.2
+    # cm_sdr_eotf = 0
+
+# }

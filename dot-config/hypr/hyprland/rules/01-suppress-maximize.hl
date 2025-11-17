@@ -1,0 +1,2 @@
+# Ignore window maximize requests sent from apps.
+windowrulev2 = suppressevent maximize, class:(.*)

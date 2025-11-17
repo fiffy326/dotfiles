@@ -1,0 +1,15 @@
+source = ../theme.hl
+
+# animations {
+
+    # Type: bool
+    # Default: true
+    # Summary: enable animations
+    # enabled = true
+
+    # Type: bool
+    # Default: false
+    # Summary: enable workspace wraparound, causing directional workspace animations to animate as if the first and last workspaces were adjacent
+    # workspace_wraparound = false
+
+# }

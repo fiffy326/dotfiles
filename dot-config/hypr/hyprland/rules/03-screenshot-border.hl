@@ -1,0 +1,2 @@
+# Prevent screenshots from capturing the selection border.
+layerrule = noanim, selection

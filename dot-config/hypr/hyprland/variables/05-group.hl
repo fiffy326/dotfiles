@@ -1,0 +1,229 @@
+source = ../theme.hl
+
+# group {
+
+    # Type: bool
+    # Default: true
+    # Summary: whether new windows will be automatically grouped into the focused unlocked group. Note: if you want to disable auto_group only for specific windows, use [the "group barred" window rule](../Window-Rules/#group-window-rule-options) instead.
+    # auto_group = true
+
+    # Type: bool
+    # Default: true
+    # Summary: whether new windows in a group spawn after current or at group tail
+    # insert_after_current = true
+
+    # Type: bool
+    # Default: true
+    # Summary: whether Hyprland should focus on the window that has just been moved out of the group
+    # focus_removed_window = true
+
+    # Type: int
+    # Default: 1
+    # Summary: whether dragging a window into a unlocked group will merge them. Options: 0 (disabled), 1 (enabled), 2 (only when dragging into the groupbar)
+    # drag_into_group = 1
+
+    # Type: bool
+    # Default: true
+    # Summary: whether window groups can be dragged into other groups
+    # merge_groups_on_drag = true
+
+    # Type: bool
+    # Default: true
+    # Summary: whether one group will be merged with another when dragged into its groupbar
+    # merge_groups_on_groupbar = true
+
+    # Type: bool
+    # Default: false
+    # Summary: whether dragging a floating window into a tiled window groupbar will merge them
+    # merge_floated_into_tiled_on_groupbar = false
+
+    # Type: bool
+    # Default: false
+    # Summary: whether using movetoworkspace[silent] will merge the window into the workspace's solitary unlocked group
+    # group_on_movetoworkspace = false
+
+    # Type: gradient
+    # Default: 0x66ffff00
+    # Summary: active group border color
+    # col.border_active = 0x66ffff00
+
+    # Type: gradient
+    # Default: 0x66777700
+    # Summary: inactive (out of focus) group border color
+    # col.border_inactive = 0x66777700
+
+    # Type: gradient
+    # Default: 0x66ff5500
+    # Summary: active locked group border color
+    # col.border_locked_active = 0x66ff5500
+
+    # Type: gradient
+    # Default: 0x66775500
+    # Summary: inactive locked group border color
+    # col.border_locked_inactive = 0x66775500
+
+    # groupbar {
+
+        # Type: bool
+        # Default: true
+        # Summary: enables groupbars
+        # enabled = true
+
+        # Type: string
+        # Default: [[Empty]]
+        # Summary: font used to display groupbar titles, use `misc:font_family` if not specified
+        # font_family = [[Empty]]
+
+        # Type: int
+        # Default: 8
+        # Summary: font size of groupbar title
+        # font_size = 8
+
+        # Type: font_weight
+        # Default: normal
+        # Summary: font weight of active groupbar title
+        # font_weight_active = normal
+
+        # Type: font_weight
+        # Default: normal
+        # Summary: font weight of inactive groupbar title
+        # font_weight_inactive = normal
+
+        # Type: bool
+        # Default: false
+        # Summary: enables gradients
+        # gradients = false
+
+        # Type: int
+        # Default: 14
+        # Summary: height of the groupbar
+        # height = 14
+
+        # Type: int
+        # Default: 0
+        # Summary: height of gap between groupbar indicator and title
+        # indicator_gap = 0
+
+        # Type: int
+        # Default: 3
+        # Summary: height of the groupbar indicator
+        # indicator_height = 3
+
+        # Type: bool
+        # Default: false
+        # Summary: render the groupbar as a vertical stack
+        # stacked = false
+
+        # Type: int
+        # Default: 3
+        # Summary: sets the decoration priority for groupbars
+        # priority = 3
+
+        # Type: bool
+        # Default: true
+        # Summary: whether to render titles in the group bar decoration
+        # render_titles = true
+
+        # Type: int
+        # Default: 0
+        # Summary: adjust vertical position for titles
+        # text_offset = 0
+
+        # Type: bool
+        # Default: true
+        # Summary: whether scrolling in the groupbar changes group active window
+        # scrolling = true
+
+        # Type: int
+        # Default: 1
+        # Summary: how much to round the indicator
+        # rounding = 1
+
+        # Type: float
+        # Default: 2.0
+        # Summary: adjusts the curve used for rounding broupbar corners, larger is smoother, 2.0 is a circle, 4.0 is a squircle, 1.0 is a triangular corner. [1.0 - 10.0]
+        # rounding_power = 2.0
+
+        # Type: int
+        # Default: 2
+        # Summary: how much to round the gradients
+        # gradient_rounding = 2
+
+        # Type: float
+        # Default: 2.0
+        # Summary: adjusts the curve used for rounding gradient corners, larger is smoother, 2.0 is a circle, 4.0 is a squircle, 1.0 is a triangular corner. [1.0 - 10.0]
+        # gradient_rounding_power = 2.0
+
+        # Type: bool
+        # Default: true
+        # Summary: round only the indicator edges of the entire groupbar
+        # round_only_edges = true
+
+        # Type: bool
+        # Default: true
+        # Summary: round only the gradient edges of the entire groupbar
+        # gradient_round_only_edges = true
+
+        # Type: color
+        # Default: 0xffffffff
+        # Summary: color for window titles in the groupbar
+        # text_color = 0xffffffff
+
+        # Type: color
+        # Default: unset
+        # Summary: color for inactive windows' titles in the groupbar (if unset, defaults to text_color)
+        # text_color_inactive = unset
+
+        # Type: color
+        # Default: unset
+        # Summary: color for the active window's title in a locked group (if unset, defaults to text_color)
+        # text_color_locked_active = unset
+
+        # Type: color
+        # Default: unset
+        # Summary: color for inactive windows' titles in locked groups (if unset, defaults to text_color_inactive)
+        # text_color_locked_inactive = unset
+
+        # Type: gradient
+        # Default: 0x66ffff00
+        # Summary: active group bar background color
+        # col.active = 0x66ffff00
+
+        # Type: gradient
+        # Default: 0x66777700
+        # Summary: inactive (out of focus) group bar background color
+        # col.inactive = 0x66777700
+
+        # Type: gradient
+        # Default: 0x66ff5500
+        # Summary: active locked group bar background color
+        # col.locked_active = 0x66ff5500
+
+        # Type: gradient
+        # Default: 0x66775500
+        # Summary: inactive locked group bar background color
+        # col.locked_inactive = 0x66775500
+
+        # Type: int
+        # Default: 2
+        # Summary: gap size between gradients
+        # gaps_in = 2
+
+        # Type: int
+        # Default: 2
+        # Summary: gap size between gradients and window
+        # gaps_out = 2
+
+        # Type: bool
+        # Default: true
+        # Summary: add or remove upper gap
+        # keep_upper_gap = true
+
+        # Type: bool
+        # Default: false
+        # Summary: applies blur to the groupbar indicators and gradients
+        # blur = false
+
+    # }
+
+# }
