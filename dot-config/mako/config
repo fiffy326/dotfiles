@@ -1,0 +1,4 @@
+include=~/.config/mako/themes/catppuccin-mocha/blue
+font=Monaspace Krypton Var 12
+border-radius=10
+default-timeout=5000
