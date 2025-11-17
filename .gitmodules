@@ -7,6 +7,9 @@
 [submodule "submodules/github.com/catppuccin/fuzzel"]
 	path = submodules/github.com/catppuccin/fuzzel
 	url = https://github.com/catppuccin/fuzzel.git
+[submodule "submodules/github.com/catppuccin/glamour"]
+	path = submodules/github.com/catppuccin/glamour
+	url = https://github.com/catppuccin/glamour.git
 [submodule "submodules/github.com/catppuccin/imv"]
 	path = submodules/github.com/catppuccin/imv
 	url = https://github.com/catppuccin/imv.git
